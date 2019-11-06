@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>0x5 合并两个排序的链表 · GitBook</title>
+        <title>0x7 二叉树的镜像 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="树的子结构.html" />
+    <link rel="next" href="顺时针打印矩阵.html" />
     
     
-    <link rel="prev" href="反转链表.html" />
+    <link rel="prev" href="树的子结构.html" />
     
 
     </head>
@@ -161,7 +161,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.5" data-path="合并两个排序的链表.html">
+        <li class="chapter " data-level="2.5" data-path="合并两个排序的链表.html">
             
                 <a href="合并两个排序的链表.html">
             
@@ -187,7 +187,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.7" data-path="二叉树的镜像.html">
+        <li class="chapter active" data-level="2.7" data-path="二叉树的镜像.html">
             
                 <a href="二叉树的镜像.html">
             
@@ -276,7 +276,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >0x5 合并两个排序的链表</a>
+        <a href="." >0x7 二叉树的镜像</a>
     </h1>
 </div>
 
@@ -291,80 +291,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6392;&#x5E8F;&#x7684;&#x94FE;&#x8868;">&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6392;&#x5E8F;&#x7684;&#x94FE;&#x8868;</h1>
+                                <h1 id="&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x955C;&#x50CF;">&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x955C;&#x50CF;</h1>
 <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
-<p>&#x8F93;&#x5165;&#x4E24;&#x4E2A;&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x8F93;&#x51FA;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x5408;&#x6210;&#x540E;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5408;&#x6210;&#x540E;&#x7684;&#x94FE;&#x8868;&#x6EE1;&#x8DB3;&#x5355;&#x8C03;&#x4E0D;&#x51CF;&#x89C4;&#x5219;&#x3002;</p>
-<h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
-<ul>
-<li>Step1.&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x65B0;&#x94FE;&#x8868;&#x7684;&#x6307;&#x9488;,&#x6682;&#x4E14;&#x8BA9;&#x5B83;&#x6307;&#x5411;NULL; </li>
-<li>Step2.&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5934;&#x7ED3;&#x70B9;,&#x8BA9;&#x8F83;&#x5C0F;&#x7684;&#x5934;&#x7ED3;&#x70B9;&#x4F5C;&#x4E3A;&#x65B0;&#x94FE;&#x8868;&#x7684;&#x5934;&#x7ED3;&#x70B9;; </li>
-<li><p>Step3.&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x3002;</p>
-</li>
-<li><p>&#x9012;&#x5F52;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5176;&#x4F59;&#x8282;&#x70B9;,&#x8BA9;&#x8F83;&#x5C0F;&#x7684;&#x8282;&#x70B9;&#x4F5C;&#x4E3A;&#x4E0A;&#x4E00;&#x4E2A;&#x65B0;&#x8282;&#x70B9;&#x7684;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;;</p>
-</li>
-<li><p>&#x5FAA;&#x73AF;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5176;&#x4F59;&#x8282;&#x70B9;,&#x8BA9;&#x8F83;&#x5C0F;&#x7684;&#x8282;&#x70B9;&#x4F5C;&#x4E3A;&#x4E0A;&#x4E00;&#x4E2A;&#x65B0;&#x8282;&#x70B9;&#x7684;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;
-&#x76F4;&#x5230;&#x6709;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x6CA1;&#x6709;&#x8282;&#x70B9;,&#x7136;&#x540E;&#x5C06;&#x65B0;&#x94FE;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x76F4;&#x63A5;&#x6307;&#x5411;&#x5269;&#x4F59;&#x94FE;&#x8868;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
-</li>
-</ul>
+<p>&#x64CD;&#x4F5C;&#x7ED9;&#x5B9A;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5C06;&#x5176;&#x53D8;&#x6362;&#x4E3A;&#x6E90;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x955C;&#x50CF;&#x3002;</p>
+<p>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x955C;&#x50CF;&#x5B9A;&#x4E49;&#xFF1A;&#x6E90;&#x4E8C;&#x53C9;&#x6811; </p>
+<pre><code>        8
+       /  \
+      6   10
+     / \  / \
+    5  7 9 11
+    &#x955C;&#x50CF;&#x4E8C;&#x53C9;&#x6811;
+        8
+       /  \
+      10   6
+     / \  / \
+    11 9 7  5
+</code></pre><h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
+<p>&#x6211;&#x4EEC;&#x6216;&#x8BB8;&#x8FD8;&#x8BB0;&#x5F97;&#x9012;&#x5F52;&#x7684;&#x7EC8;&#x6781;&#x601D;&#x60F3;&#x662F;&#x6570;&#x5B66;&#x5F52;&#x7EB3;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x601D;&#x8003;&#x9012;&#x5F52;&#x7684;&#x65F6;&#x5019;&#x4E00;&#x5B9A;&#x4E0D;&#x8981;&#x53BB;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x770B;&#x5B83;&#x6267;&#x884C;&#x4E86;&#x5565;&#xFF0C;&#x53EA;&#x4F1A;&#x66F4;&#x7ED5;&#x3002;&#x6211;&#x4EEC;&#x7262;&#x7262;&#x8BB0;&#x4F4F;&#xFF0C;&#x601D;&#x8003;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x5047;&#x8BBE;&#x5B50;&#x95EE;&#x9898;&#x90FD;&#x5DF2;&#x7ECF;&#x5B8C;&#x7F8E;&#x5904;&#x7406;&#xFF0C;&#x6211;&#x53EA;&#x9700;&#x8981;&#x5904;&#x7406;&#x4E00;&#x4E0B;&#x6700;&#x7EC8;&#x7684;&#x95EE;&#x9898;&#x5373;&#x53EF;&#xFF0C;&#x5B50;&#x95EE;&#x9898;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E0E;&#x6700;&#x7EC8;&#x90A3;&#x4E2A;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x662F;&#x95EE;&#x9898;&#x89C4;&#x6A21;&#x4E00;&#x5B9A;&#x8981;&#x4EE5;1&#x7684;&#x8FDB;&#x5236;&#x7F29;&#x5C0F;&#x3002;&#x6700;&#x540E;&#x7ED9;&#x4E00;&#x4E2A;&#x9012;&#x5F52;&#x51FA;&#x53E3;&#x6761;&#x4EF6;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x672C;&#x9898;&#xFF0C;&#x9996;&#x5148;&#x5047;&#x8BBE;root&#x7684;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x5DF2;&#x7ECF;&#x90FD;&#x5904;&#x7406;&#x597D;&#x4E86;&#xFF0C;&#x5373;&#x5DE6;&#x5B50;&#x6811;&#x81EA;&#x8EAB;&#x5DF2;&#x7ECF;&#x955C;&#x50CF;&#x4E86;&#xFF0C;&#x53F3;&#x5B50;&#x6811;&#x81EA;&#x8EAB;&#x4E5F;&#x955C;&#x50CF;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x6700;&#x540E;&#x4E00;&#x6B65;&#x5C31;&#x662F;&#x4EA4;&#x6362;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#xFF0C;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x53EA;&#x9700;&#x8981;&#x5C06;root.left&#x548C;root.right&#x4EA4;&#x6362;&#x5373;&#x53EF;&#x3002;&#x4E0B;&#x9762;&#x8FDB;&#x5165;&#x9012;&#x5F52;&#xFF0C;&#x5C31;&#x662F;&#x5904;&#x7406;&#x5B50;&#x95EE;&#x9898;&#x3002;&#x5B50;&#x95EE;&#x9898;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E0E;root&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x662F;&#x8981;&#x7F29;&#x5C0F;&#x95EE;&#x9898;&#x89C4;&#x6A21;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x9700;&#x8981;&#x8003;&#x8651;root.left&#x662F;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#xFF0C;root.right&#x662F;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x5373;&#x53EF;&#x3002;</p>
 <h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
-<p><strong><em>&#x975E;&#x9012;&#x5F52;</em></strong></p>
-<pre><code>/*
-public class ListNode {
-    int val;
-    ListNode next = null;
+<pre><code>/**
+public class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
 
-    ListNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
-    }
-}*/
-public class Solution {
-    public ListNode Merge(ListNode list1,ListNode list2) {
-        if(list1 == null){
-            return list2;
-        }
-        if(list2 == null){
-            return list1;
-        }
-        ListNode root = new ListNode(-1);
-        ListNode pointer = root;
 
-        while(list1 !=null &amp;&amp; list2 != null){
-            if(list1.val&lt;list2.val){
-                pointer.next = list1;
-                list1 = list1.next;
-            }else{
-                pointer.next = list2;
-                list2 = list2.next;
-            }
-            pointer = pointer.next;
-        }
-        if(list1 != null){
-            pointer.next = list1;
-        }
-        if(list2 !=null){
-            pointer.next = list2;
-        }
-        return root.next;
     }
+
 }
-</code></pre><p><strong><em>&#x9012;&#x5F52;</em></strong></p>
-<pre><code>public class Solution {
-    public ListNode Merge(ListNode list1,ListNode list2) {
-        if(list1 == null){
-            return list2;
-        }
+*/
 
-        if(list2 == null){
-            return list1;
-        }
-        ListNode tmp = list1;
-        if(list1.val&lt;list2.val){
-            tmp.next = Merge(list1.next,list2);
-        }else{
-            tmp = list2;
-            tmp.next = Merge(list1,list2.next);
-        }
-        return tmp;
+public class Solution {
+    public void Mirror(TreeNode root) {
+    //&#x4E3A;&#x7A7A;&#x5219;&#x7ED3;&#x675F;
+        if(root == null) return;
+
+        //&#x5047;&#x8BBE;root&#x4E24;&#x8FB9;&#x7684;&#x5B50;&#x6811;&#x81EA;&#x5DF1;&#x90FD;&#x5DF2;&#x7ECF;&#x7FFB;&#x8F6C;&#x6210;&#x529F;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x9700;&#x8981;&#x518D;&#x5C06;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x4E92;&#x6362;&#x4E00;&#x4E0B;&#x5C31;&#x6210;&#x529F;&#x4E86;
+        //&#x4EA4;&#x6362;root&#x7684;&#x5DE6;&#x53F3;&#x5B50;&#x6811;
+            TreeNode tmp = root.left;
+            root.left = root.right;
+            root.right = tmp;
+
+        //&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x7FFB;&#x8F6C;&#x81EA;&#x5DF1;&#x53BB;&#x5904;&#x7406;&#x5C31;&#x884C;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x89C4;&#x5B9A;&#x6BCF;&#x4E2A;&#x5B50;&#x6811;&#x7684;root&#x90FD;&#x8DDF;&#x6700;&#x7EC8;&#x7684;root&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E00;&#x6837;&#x5373;&#x53EF;
+         Mirror(root.left);
+         Mirror(root.right);
     }
 }
 </code></pre>
@@ -394,12 +367,12 @@ public class Solution {
 
             
                 
-                <a href="反转链表.html" class="navigation navigation-prev " aria-label="Previous page: 0x4 反转链表">
+                <a href="树的子结构.html" class="navigation navigation-prev " aria-label="Previous page: 0x6 树的子结构">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="树的子结构.html" class="navigation navigation-next " aria-label="Next page: 0x6 树的子结构">
+                <a href="顺时针打印矩阵.html" class="navigation navigation-next " aria-label="Next page: 0x8 顺时针打印矩阵">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -410,7 +383,7 @@ public class Solution {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"0x5 合并两个排序的链表","level":"2.5","depth":1,"next":{"title":"0x6 树的子结构","level":"2.6","depth":1,"path":"树的子结构.md","ref":"树的子结构.md","articles":[]},"previous":{"title":"0x4 反转链表","level":"2.4","depth":1,"path":"反转链表.md","ref":"反转链表.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"合并两个排序的链表.md","mtime":"2019-11-06T02:24:12.586Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-06T10:45:52.204Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0x7 二叉树的镜像","level":"2.7","depth":1,"next":{"title":"0x8 顺时针打印矩阵","level":"2.8","depth":1,"path":"顺时针打印矩阵.md","ref":"顺时针打印矩阵.md","articles":[]},"previous":{"title":"0x6 树的子结构","level":"2.6","depth":1,"path":"树的子结构.md","ref":"树的子结构.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"二叉树的镜像.md","mtime":"2019-11-06T06:45:01.057Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-06T10:45:52.204Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
