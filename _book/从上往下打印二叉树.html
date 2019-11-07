@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>介绍 · GitBook</title>
+        <title>0x11 从上往下打印二叉树 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="数值的整数次方.html" />
+    <link rel="next" href="二叉搜索树的后序遍历序列.html" />
     
+    
+    <link rel="prev" href="栈的压入、弹出序列.html" />
     
 
     </head>
@@ -87,7 +89,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -237,7 +239,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.11" data-path="从上往下打印二叉树.html">
+        <li class="chapter active" data-level="2.11" data-path="从上往下打印二叉树.html">
             
                 <a href="从上往下打印二叉树.html">
             
@@ -378,7 +380,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >介绍</a>
+        <a href="." >0x11 从上往下打印二叉树</a>
     </h1>
 </div>
 
@@ -393,16 +395,46 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x674E;&#x5CE5;&#x7684;&#x7B97;&#x6CD5;&#x5237;&#x9898;&#x4E4B;&#x8DEF;">&#x674E;&#x5CE5;&#x7684;&#x7B97;&#x6CD5;&#x5237;&#x9898;&#x4E4B;&#x8DEF;</h1>
-<p><img src="http://img1.imgtn.bdimg.com/it/u=1485492151,3127821112&amp;fm=26&amp;gp=0.jpg" alt=""></p>
-<ul>
-<li><p>&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x81EA;&#x5DF1;&#x505A;&#x7B97;&#x6CD5;&#x7684;&#x6BCF;&#x4E00;&#x5929;</p>
-</li>
-<li><p><a href="SUMMARY.md">&#x76EE;&#x5F55;</a></p>
-</li>
-</ul>
-<p><a href="http://www.lizheng0928.top/" target="_blank">http://www.lizheng0928.top/</a></p>
+                                <h1 id="&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;&#x6253;&#x5370;&#x4E8C;&#x53C9;&#x6811;">&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;&#x6253;&#x5370;&#x4E8C;&#x53C9;&#x6811;</h1>
+<h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
+<p>&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;&#x6253;&#x5370;&#x51FA;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x540C;&#x5C42;&#x8282;&#x70B9;&#x4ECE;&#x5DE6;&#x81F3;&#x53F3;&#x6253;&#x5370;&#x3002;</p>
+<h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
+<p>&#x601D;&#x8DEF;&#x662F;&#x7528;arraylist&#x6A21;&#x62DF;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x6765;&#x5B58;&#x50A8;&#x76F8;&#x5E94;&#x7684;TreeNode</p>
+<h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
+<pre><code>/**
+public class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
 
+    public TreeNode(int val) {
+        this.val = val;
+
+    }
+
+}
+*/
+
+public class Solution {
+    public ArrayList&lt;Integer&gt; PrintFromTopToBottom(TreeNode root) {
+        ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+        ArrayList&lt;TreeNode&gt; queue = new ArrayList&lt;&gt;();
+        if(root == null) return list;
+        queue.add(root);
+        while(!queue.isEmpty()){
+            TreeNode tmp = queue.remove(0);
+            list.add(tmp.val);
+            if(tmp.left != null){
+                queue.add(tmp.left);
+            }
+            if(tmp.right !=null){
+                queue.add(tmp.right);
+            }
+        }
+        return list;
+    }
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -429,8 +461,12 @@
 
             
                 
+                <a href="栈的压入、弹出序列.html" class="navigation navigation-prev " aria-label="Previous page: 0x10 栈的压入、弹出序列">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="数值的整数次方.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 0x1 数值的整数次方">
+                
+                <a href="二叉搜索树的后序遍历序列.html" class="navigation navigation-next " aria-label="Next page: 0x12 二叉搜索树的后序遍历序列">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -441,7 +477,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"介绍","level":"1.1","depth":1,"next":{"title":"0x1 数值的整数次方","level":"2.1","depth":1,"path":"数值的整数次方.md","ref":"数值的整数次方.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-11-07T08:14:18.116Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-07T15:17:53.436Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0x11 从上往下打印二叉树","level":"2.11","depth":1,"next":{"title":"0x12 二叉搜索树的后序遍历序列","level":"2.12","depth":1,"path":"二叉搜索树的后序遍历序列.md","ref":"二叉搜索树的后序遍历序列.md","articles":[]},"previous":{"title":"0x10 栈的压入、弹出序列","level":"2.10","depth":1,"path":"栈的压入、弹出序列.md","ref":"栈的压入、弹出序列.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"从上往下打印二叉树.md","mtime":"2019-11-07T08:39:12.856Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-07T15:17:53.436Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

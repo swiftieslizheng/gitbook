@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>介绍 · GitBook</title>
+        <title>0x13 二叉树中和为某一值的路径 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="数值的整数次方.html" />
+    <link rel="next" href="复杂链表的复制.html" />
     
+    
+    <link rel="prev" href="二叉搜索树的后序遍历序列.html" />
     
 
     </head>
@@ -87,7 +89,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -263,7 +265,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.13" data-path="二叉树中和为某一值的路径.html">
+        <li class="chapter active" data-level="2.13" data-path="二叉树中和为某一值的路径.html">
             
                 <a href="二叉树中和为某一值的路径.html">
             
@@ -378,7 +380,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >介绍</a>
+        <a href="." >0x13 二叉树中和为某一值的路径</a>
     </h1>
 </div>
 
@@ -393,16 +395,47 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x674E;&#x5CE5;&#x7684;&#x7B97;&#x6CD5;&#x5237;&#x9898;&#x4E4B;&#x8DEF;">&#x674E;&#x5CE5;&#x7684;&#x7B97;&#x6CD5;&#x5237;&#x9898;&#x4E4B;&#x8DEF;</h1>
-<p><img src="http://img1.imgtn.bdimg.com/it/u=1485492151,3127821112&amp;fm=26&amp;gp=0.jpg" alt=""></p>
-<ul>
-<li><p>&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x81EA;&#x5DF1;&#x505A;&#x7B97;&#x6CD5;&#x7684;&#x6BCF;&#x4E00;&#x5929;</p>
-</li>
-<li><p><a href="SUMMARY.md">&#x76EE;&#x5F55;</a></p>
-</li>
-</ul>
-<p><a href="http://www.lizheng0928.top/" target="_blank">http://www.lizheng0928.top/</a></p>
+                                <h1 id="&#x4E8C;&#x53C9;&#x6811;&#x4E2D;&#x548C;&#x4E3A;&#x67D0;&#x4E00;&#x503C;&#x7684;&#x8DEF;&#x5F84;">&#x4E8C;&#x53C9;&#x6811;&#x4E2D;&#x548C;&#x4E3A;&#x67D0;&#x4E00;&#x503C;&#x7684;&#x8DEF;&#x5F84;</h1>
+<h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
+<p>&#x8F93;&#x5165;&#x4E00;&#x9897;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x8DDF;&#x8282;&#x70B9;&#x548C;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#xFF0C;&#x6253;&#x5370;&#x51FA;&#x4E8C;&#x53C9;&#x6811;&#x4E2D;&#x7ED3;&#x70B9;&#x503C;&#x7684;&#x548C;&#x4E3A;&#x8F93;&#x5165;&#x6574;&#x6570;&#x7684;&#x6240;&#x6709;&#x8DEF;&#x5F84;&#x3002;&#x8DEF;&#x5F84;&#x5B9A;&#x4E49;&#x4E3A;&#x4ECE;&#x6811;&#x7684;&#x6839;&#x7ED3;&#x70B9;&#x5F00;&#x59CB;&#x5F80;&#x4E0B;&#x4E00;&#x76F4;&#x5230;&#x53F6;&#x7ED3;&#x70B9;&#x6240;&#x7ECF;&#x8FC7;&#x7684;&#x7ED3;&#x70B9;&#x5F62;&#x6210;&#x4E00;&#x6761;&#x8DEF;&#x5F84;&#x3002;(&#x6CE8;&#x610F;: &#x5728;&#x8FD4;&#x56DE;&#x503C;&#x7684;list&#x4E2D;&#xFF0C;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x5927;&#x7684;&#x6570;&#x7EC4;&#x9760;&#x524D;)</p>
+<h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
+<h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
+<pre><code>import java.util.ArrayList;
+/**
+public class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
 
+    public TreeNode(int val) {
+        this.val = val;
+
+    }
+
+}
+*/
+public class Solution {
+        public ArrayList&lt;ArrayList&lt;Integer&gt;&gt; FindPath(TreeNode root, int target) {
+        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; paths = new ArrayList&lt;&gt;();
+        if(root == null) return paths;
+        find(paths,new ArrayList&lt;Integer&gt;(),root,target);
+        return paths;
+    }
+    public void find(ArrayList&lt;ArrayList&lt;Integer&gt;&gt; paths, ArrayList&lt;Integer&gt; path, TreeNode root, int target) {
+        path.add(root.val);
+        if(root.left == null &amp;&amp; root.right == null){
+            if(target == root.val){
+                paths.add(path);
+            }
+            return;
+        }
+        ArrayList&lt;Integer&gt; path2 = new ArrayList&lt;&gt;();
+        path2.addAll(path);
+        if(root.left != null) find(paths,path,root.left,target-root.val);
+        if(root.right != null) find(paths,path2,root.right,target-root.val);
+    }
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -429,8 +462,12 @@
 
             
                 
+                <a href="二叉搜索树的后序遍历序列.html" class="navigation navigation-prev " aria-label="Previous page: 0x12 二叉搜索树的后序遍历序列">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="数值的整数次方.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 0x1 数值的整数次方">
+                
+                <a href="复杂链表的复制.html" class="navigation navigation-next " aria-label="Next page: 0x14 复杂链表的复制">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -441,7 +478,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"介绍","level":"1.1","depth":1,"next":{"title":"0x1 数值的整数次方","level":"2.1","depth":1,"path":"数值的整数次方.md","ref":"数值的整数次方.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-11-07T08:14:18.116Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-07T15:17:53.436Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0x13 二叉树中和为某一值的路径","level":"2.13","depth":1,"next":{"title":"0x14 复杂链表的复制","level":"2.14","depth":1,"path":"复杂链表的复制.md","ref":"复杂链表的复制.md","articles":[]},"previous":{"title":"0x12 二叉搜索树的后序遍历序列","level":"2.12","depth":1,"path":"二叉搜索树的后序遍历序列.md","ref":"二叉搜索树的后序遍历序列.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"二叉树中和为某一值的路径.md","mtime":"2019-11-07T14:51:49.164Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-07T15:17:53.436Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
