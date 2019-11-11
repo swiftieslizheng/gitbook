@@ -9,7 +9,7 @@
 
 ### 代码：
 
-```
+```java
 /*
 public class ListNode {
     int val;

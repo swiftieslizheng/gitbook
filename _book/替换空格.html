@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>0x20 包含min函数的栈 · GitBook</title>
+        <title>0x2 替换空格 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="栈的压入、弹出序列.html" />
+    <link rel="next" href="从尾到头打印链表.html" />
     
     
-    <link rel="prev" href="顺时针打印矩阵.html" />
+    <link rel="prev" href="二维数组中的查找.html" />
     
 
     </head>
@@ -122,7 +122,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="替换空格.html">
+        <li class="chapter active" data-level="2.2" data-path="替换空格.html">
             
                 <a href="替换空格.html">
             
@@ -356,7 +356,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.20" data-path="包含min函数的栈.html">
+        <li class="chapter " data-level="2.20" data-path="包含min函数的栈.html">
             
                 <a href="包含min函数的栈.html">
             
@@ -536,7 +536,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >0x20 包含min函数的栈</a>
+        <a href="." >0x2 替换空格</a>
     </h1>
 </div>
 
@@ -551,58 +551,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5305;&#x542B;min&#x51FD;&#x6570;&#x7684;&#x6808;">&#x5305;&#x542B;min&#x51FD;&#x6570;&#x7684;&#x6808;</h1>
+                                <h1 id="&#x66FF;&#x6362;&#x7A7A;&#x683C;">&#x66FF;&#x6362;&#x7A7A;&#x683C;</h1>
 <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
-<p>&#x5B9A;&#x4E49;&#x6808;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x8BF7;&#x5728;&#x8BE5;&#x7C7B;&#x578B;&#x4E2D;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x5F97;&#x5230;&#x6808;&#x4E2D;&#x6240;&#x542B;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x7684;min&#x51FD;&#x6570;&#xFF08;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5E94;&#x4E3A;O&#xFF08;1&#xFF09;&#xFF09;&#x3002;</p>
+<p>&#x8BF7;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x7A7A;&#x683C;&#x66FF;&#x6362;&#x6210;&#x201C;%20&#x201D;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;We Are Happy.&#x5219;&#x7ECF;&#x8FC7;&#x66FF;&#x6362;&#x4E4B;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;We%20Are%20Happy&#x3002;</p>
 <h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
-<p>&#x628A;&#x6BCF;&#x6B21;&#x7684;&#x6700;&#x5C0F;&#x5143;&#x7D20;(&#x4E4B;&#x524D;&#x7684;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x548C;&#x65B0;&#x538B;&#x5165;&#x6218;&#x7684;&#x5143;&#x7D20;&#x4E24;&#x8005;&#x7684;&#x8F83;&#x5C0F;&#x503C;)&#x90FD;&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#x653E;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x8F85;&#x52A9;&#x6808;&#x91CC;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x6BCF;&#x6B21;&#x90FD;&#x628A;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x538B;&#x5165;&#x8F85;&#x52A9;&#x6808;, &#x90A3;&#x4E48;&#x5C31;&#x80FD;&#x4FDD;&#x8BC1;&#x8F85;&#x52A9;&#x6808;&#x7684;&#x6808;&#x9876;&#x4E00;&#x76F4;&#x90FD;&#x662F;&#x6700;&#x5C0F;&#x5143;&#x7D20;.&#x5F53;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x4ECE;&#x6570;&#x636E;&#x6808;&#x5185;&#x88AB;&#x5F39;&#x51FA;&#x4E4B;&#x540E;,&#x540C;&#x65F6;&#x5F39;&#x51FA;&#x8F85;&#x52A9;&#x6808;&#x7684;&#x6808;&#x9876;&#x5143;&#x7D20;,&#x6B64;&#x65F6;&#x8F85;&#x52A9;&#x6808;&#x7684;&#x65B0;&#x6808;&#x9876;&#x5143;&#x7D20;&#x5C31;&#x662F;&#x4E0B;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x503C;&#x3002;</p>
+<p>&#x904D;&#x5386;&#x4E00;&#x8FB9;&#x5B57;&#x7B26;&#x4E32;&#x627E;&#x51FA;&#x7A7A;&#x683C;&#x7684;&#x6570;&#x91CF;,&#x8BB0;&#x5F55;&#x4EE5;&#x524D;&#x7684;&#x957F;&#x5EA6;,&#x8BB0;&#x5F55;&#x7A7A;&#x683C;&#x7684;&#x6570;&#x91CF;,&#x78B0;&#x5230;&#x7A7A;&#x683C;&#x5C31;&#x66FF;&#x6362;</p>
 <h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
-<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.Stack;
-
-    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-        <span class="hljs-keyword">private</span> Stack&lt;Integer&gt; stack = <span class="hljs-keyword">new</span> Stack&lt;Integer&gt;();
-        <span class="hljs-keyword">private</span> Stack&lt;Integer&gt; minStack = <span class="hljs-keyword">new</span> Stack&lt;Integer&gt;();
-
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">push</span><span class="hljs-params">(<span class="hljs-keyword">int</span> node)</span> </span>{
-            stack.push(node);
-
-            <span class="hljs-keyword">if</span>(minStack.size() == <span class="hljs-number">0</span> || node&lt;minStack.peek()){
-                minStack.push(node);
-            }<span class="hljs-keyword">else</span>{
-                minStack.add(minStack.peek());
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">replaceSpace</span><span class="hljs-params">(StringBuffer str)</span> </span>{
+        <span class="hljs-keyword">int</span> blankspace = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;str.length();i++){
+            <span class="hljs-keyword">if</span>(str.charAt(i) == <span class="hljs-string">&apos; &apos;</span>){
+                blankspace++;
             }
         }
+        <span class="hljs-keyword">int</span> indexOld = str.length()-<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> newLength = str.length() + <span class="hljs-number">2</span>*blankspace;
+        <span class="hljs-keyword">int</span> indexNew = newLength -<span class="hljs-number">1</span>;
+        str.setLength(newLength);
 
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pop</span><span class="hljs-params">()</span></span>{
-            <span class="hljs-keyword">if</span>(stack.size() == <span class="hljs-number">0</span>){
-                <span class="hljs-keyword">try</span> {
-                    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;null&quot;</span>);
-                } <span class="hljs-keyword">catch</span> (Exception e) {
-                    e.printStackTrace();
-                }
+        <span class="hljs-keyword">for</span>(;indexOld&gt;=<span class="hljs-number">0</span> &amp;&amp; indexOld&lt;indexNew;indexOld--){
+            <span class="hljs-keyword">if</span>(str.charAt(indexOld) == <span class="hljs-string">&apos; &apos;</span>){
+                str.setCharAt(indexNew--,<span class="hljs-string">&apos;0&apos;</span>);
+                str.setCharAt(indexNew--,<span class="hljs-string">&apos;2&apos;</span>);
+                str.setCharAt(indexNew--,<span class="hljs-string">&apos;%&apos;</span>);
+            }<span class="hljs-keyword">else</span> {
+                str.setCharAt(indexNew--,str.charAt(indexOld));
             }
-            stack.pop();
-            minStack.pop();
         }
-
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">top</span><span class="hljs-params">()</span> </span>{
-            <span class="hljs-keyword">int</span> data = stack.pop();
-            stack.push(data);
-            <span class="hljs-keyword">return</span> data;
-        }
-
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">min</span><span class="hljs-params">()</span></span>{
-            <span class="hljs-keyword">if</span>(minStack.size() == <span class="hljs-number">0</span>){
-                <span class="hljs-keyword">try</span> {
-                    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;null&quot;</span>);
-                } <span class="hljs-keyword">catch</span> (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-            <span class="hljs-keyword">return</span> minStack.peek();
-        }
+        <span class="hljs-keyword">return</span> str.toString();
     }
+}
 </code></pre>
 
                                 
@@ -631,12 +610,12 @@
 
             
                 
-                <a href="顺时针打印矩阵.html" class="navigation navigation-prev " aria-label="Previous page: 0x19 顺时针打印矩阵">
+                <a href="二维数组中的查找.html" class="navigation navigation-prev " aria-label="Previous page: 0x1 二维数组中的查找">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="栈的压入、弹出序列.html" class="navigation navigation-next " aria-label="Next page: 0x21 栈的压入、弹出序列">
+                <a href="从尾到头打印链表.html" class="navigation navigation-next " aria-label="Next page: 0x3 从尾到头打印链表">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -647,7 +626,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"0x20 包含min函数的栈","level":"2.20","depth":1,"next":{"title":"0x21 栈的压入、弹出序列","level":"2.21","depth":1,"path":"栈的压入、弹出序列.md","ref":"栈的压入、弹出序列.md","articles":[]},"previous":{"title":"0x19 顺时针打印矩阵","level":"2.19","depth":1,"path":"顺时针打印矩阵.md","ref":"顺时针打印矩阵.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"包含min函数的栈.md","mtime":"2019-11-11T03:10:12.884Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-11T03:11:33.451Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0x2 替换空格","level":"2.2","depth":1,"next":{"title":"0x3 从尾到头打印链表","level":"2.3","depth":1,"path":"从尾到头打印链表.md","ref":"从尾到头打印链表.md","articles":[]},"previous":{"title":"0x1 二维数组中的查找","level":"2.1","depth":1,"path":"二维数组中的查找.md","ref":"二维数组中的查找.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"替换空格.md","mtime":"2019-11-11T03:07:54.950Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-11T03:11:33.451Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

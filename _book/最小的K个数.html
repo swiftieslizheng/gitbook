@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>0x20 包含min函数的栈 · GitBook</title>
+        <title>0x29 最小的K个数 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="栈的压入、弹出序列.html" />
+    <link rel="next" href="连续子数组的最大和.md" />
     
     
-    <link rel="prev" href="顺时针打印矩阵.html" />
+    <link rel="prev" href="数组中出现次数超过一半的数字.html" />
     
 
     </head>
@@ -356,7 +356,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.20" data-path="包含min函数的栈.html">
+        <li class="chapter " data-level="2.20" data-path="包含min函数的栈.html">
             
                 <a href="包含min函数的栈.html">
             
@@ -473,7 +473,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.29" data-path="最小的K个数.html">
+        <li class="chapter active" data-level="2.29" data-path="最小的K个数.html">
             
                 <a href="最小的K个数.html">
             
@@ -536,7 +536,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >0x20 包含min函数的栈</a>
+        <a href="." >0x29 最小的K个数</a>
     </h1>
 </div>
 
@@ -551,58 +551,41 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5305;&#x542B;min&#x51FD;&#x6570;&#x7684;&#x6808;">&#x5305;&#x542B;min&#x51FD;&#x6570;&#x7684;&#x6808;</h1>
+                                <h1 id="&#x6700;&#x5C0F;&#x7684;k&#x4E2A;&#x6570;">&#x6700;&#x5C0F;&#x7684;K&#x4E2A;&#x6570;</h1>
 <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
-<p>&#x5B9A;&#x4E49;&#x6808;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x8BF7;&#x5728;&#x8BE5;&#x7C7B;&#x578B;&#x4E2D;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x5F97;&#x5230;&#x6808;&#x4E2D;&#x6240;&#x542B;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x7684;min&#x51FD;&#x6570;&#xFF08;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5E94;&#x4E3A;O&#xFF08;1&#xFF09;&#xFF09;&#x3002;</p>
+<p>&#x8F93;&#x5165;n&#x4E2A;&#x6574;&#x6570;&#xFF0C;&#x627E;&#x51FA;&#x5176;&#x4E2D;&#x6700;&#x5C0F;&#x7684;K&#x4E2A;&#x6570;&#x3002;&#x4F8B;&#x5982;&#x8F93;&#x5165;4,5,1,6,2,7,3,8&#x8FD9;8&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x5219;&#x6700;&#x5C0F;&#x7684;4&#x4E2A;&#x6570;&#x5B57;&#x662F;1,2,3,4,&#x3002;</p>
 <h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
-<p>&#x628A;&#x6BCF;&#x6B21;&#x7684;&#x6700;&#x5C0F;&#x5143;&#x7D20;(&#x4E4B;&#x524D;&#x7684;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x548C;&#x65B0;&#x538B;&#x5165;&#x6218;&#x7684;&#x5143;&#x7D20;&#x4E24;&#x8005;&#x7684;&#x8F83;&#x5C0F;&#x503C;)&#x90FD;&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#x653E;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x8F85;&#x52A9;&#x6808;&#x91CC;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x6BCF;&#x6B21;&#x90FD;&#x628A;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x538B;&#x5165;&#x8F85;&#x52A9;&#x6808;, &#x90A3;&#x4E48;&#x5C31;&#x80FD;&#x4FDD;&#x8BC1;&#x8F85;&#x52A9;&#x6808;&#x7684;&#x6808;&#x9876;&#x4E00;&#x76F4;&#x90FD;&#x662F;&#x6700;&#x5C0F;&#x5143;&#x7D20;.&#x5F53;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x4ECE;&#x6570;&#x636E;&#x6808;&#x5185;&#x88AB;&#x5F39;&#x51FA;&#x4E4B;&#x540E;,&#x540C;&#x65F6;&#x5F39;&#x51FA;&#x8F85;&#x52A9;&#x6808;&#x7684;&#x6808;&#x9876;&#x5143;&#x7D20;,&#x6B64;&#x65F6;&#x8F85;&#x52A9;&#x6808;&#x7684;&#x65B0;&#x6808;&#x9876;&#x5143;&#x7D20;&#x5C31;&#x662F;&#x4E0B;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x503C;&#x3002;</p>
+<p>&#x7528;&#x6700;&#x5927;&#x5806;&#x4FDD;&#x5B58;&#x8FD9;k&#x4E2A;&#x6570;&#xFF0C;&#x6BCF;&#x6B21;&#x53EA;&#x548C;&#x5806;&#x9876;&#x6BD4;&#xFF0C;&#x5982;&#x679C;&#x6BD4;&#x5806;&#x9876;&#x5C0F;&#xFF0C;&#x5220;&#x9664;&#x5806;&#x9876;&#xFF0C;&#x65B0;&#x6570;&#x5165;&#x5806;</p>
 <h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
-<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.Stack;
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.Comparator;
+<span class="hljs-keyword">import</span> java.util.PriorityQueue;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ArrayList&lt;Integer&gt; <span class="hljs-title">GetLeastNumbers_Solution</span><span class="hljs-params">(<span class="hljs-keyword">int</span> [] input, <span class="hljs-keyword">int</span> k)</span> </span>{
+        ArrayList&lt;Integer&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">if</span>(k&gt; input.length || k == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> res;
+        PriorityQueue&lt;Integer&gt; maxHeap = <span class="hljs-keyword">new</span> PriorityQueue&lt;&gt;(k, <span class="hljs-keyword">new</span> Comparator&lt;Integer&gt;() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(Integer o1, Integer o2)</span> </span>{
+                <span class="hljs-keyword">return</span> o2.compareTo(o1);
+            }
+        });
 
-    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-        <span class="hljs-keyword">private</span> Stack&lt;Integer&gt; stack = <span class="hljs-keyword">new</span> Stack&lt;Integer&gt;();
-        <span class="hljs-keyword">private</span> Stack&lt;Integer&gt; minStack = <span class="hljs-keyword">new</span> Stack&lt;Integer&gt;();
-
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">push</span><span class="hljs-params">(<span class="hljs-keyword">int</span> node)</span> </span>{
-            stack.push(node);
-
-            <span class="hljs-keyword">if</span>(minStack.size() == <span class="hljs-number">0</span> || node&lt;minStack.peek()){
-                minStack.push(node);
-            }<span class="hljs-keyword">else</span>{
-                minStack.add(minStack.peek());
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;input.length;i++){
+            <span class="hljs-keyword">if</span>(maxHeap.size() != k){
+                maxHeap.offer(input[i]);
+            }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(maxHeap.peek()&gt;input[i]){
+                maxHeap.poll();
+                maxHeap.offer(input[i]);
             }
         }
 
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pop</span><span class="hljs-params">()</span></span>{
-            <span class="hljs-keyword">if</span>(stack.size() == <span class="hljs-number">0</span>){
-                <span class="hljs-keyword">try</span> {
-                    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;null&quot;</span>);
-                } <span class="hljs-keyword">catch</span> (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-            stack.pop();
-            minStack.pop();
+        <span class="hljs-keyword">for</span>(Integer integer : maxHeap){
+            res.add(integer);
         }
-
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">top</span><span class="hljs-params">()</span> </span>{
-            <span class="hljs-keyword">int</span> data = stack.pop();
-            stack.push(data);
-            <span class="hljs-keyword">return</span> data;
-        }
-
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">min</span><span class="hljs-params">()</span></span>{
-            <span class="hljs-keyword">if</span>(minStack.size() == <span class="hljs-number">0</span>){
-                <span class="hljs-keyword">try</span> {
-                    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;null&quot;</span>);
-                } <span class="hljs-keyword">catch</span> (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-            <span class="hljs-keyword">return</span> minStack.peek();
-        }
+        <span class="hljs-keyword">return</span> res;
     }
+}
 </code></pre>
 
                                 
@@ -631,12 +614,12 @@
 
             
                 
-                <a href="顺时针打印矩阵.html" class="navigation navigation-prev " aria-label="Previous page: 0x19 顺时针打印矩阵">
+                <a href="数组中出现次数超过一半的数字.html" class="navigation navigation-prev " aria-label="Previous page: 0x28 数组中出现次数超过一半的数字">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="栈的压入、弹出序列.html" class="navigation navigation-next " aria-label="Next page: 0x21 栈的压入、弹出序列">
+                <a href="连续子数组的最大和.md" class="navigation navigation-next " aria-label="Next page: 0x30 连续子数组的最大和">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -647,7 +630,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"0x20 包含min函数的栈","level":"2.20","depth":1,"next":{"title":"0x21 栈的压入、弹出序列","level":"2.21","depth":1,"path":"栈的压入、弹出序列.md","ref":"栈的压入、弹出序列.md","articles":[]},"previous":{"title":"0x19 顺时针打印矩阵","level":"2.19","depth":1,"path":"顺时针打印矩阵.md","ref":"顺时针打印矩阵.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"包含min函数的栈.md","mtime":"2019-11-11T03:10:12.884Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-11T03:11:33.451Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0x29 最小的K个数","level":"2.29","depth":1,"next":{"title":"0x30 连续子数组的最大和","level":"2.30","depth":1,"path":"连续子数组的最大和.md","ref":"连续子数组的最大和.md","articles":[]},"previous":{"title":"0x28 数组中出现次数超过一半的数字","level":"2.28","depth":1,"path":"数组中出现次数超过一半的数字.md","ref":"数组中出现次数超过一半的数字.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"最小的K个数.md","mtime":"2019-11-11T03:06:45.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-11T03:11:33.451Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
