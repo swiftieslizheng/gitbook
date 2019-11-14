@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>0x16 合并两个排序的链表 · GitBook</title>
+        <title>0x31 整数中1出现的次数 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="树的子结构.html" />
+    <link rel="next" href="把数组排成最小的数.html" />
     
     
-    <link rel="prev" href="反转链表.html" />
+    <link rel="prev" href="连续子数组的最大和.html" />
     
 
     </head>
@@ -304,7 +304,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.16" data-path="合并两个排序的链表.html">
+        <li class="chapter " data-level="2.16" data-path="合并两个排序的链表.html">
             
                 <a href="合并两个排序的链表.html">
             
@@ -499,7 +499,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.31" data-path="整数中1出现的次数.html">
+        <li class="chapter active" data-level="2.31" data-path="整数中1出现的次数.html">
             
                 <a href="整数中1出现的次数.html">
             
@@ -640,7 +640,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >0x16 合并两个排序的链表</a>
+        <a href="." >0x31 整数中1出现的次数</a>
     </h1>
 </div>
 
@@ -655,81 +655,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6392;&#x5E8F;&#x7684;&#x94FE;&#x8868;">&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6392;&#x5E8F;&#x7684;&#x94FE;&#x8868;</h1>
+                                <h1 id="&#x6574;&#x6570;&#x4E2D;1&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#xFF08;&#x4ECE;1&#x5230;n&#x6574;&#x6570;&#x4E2D;1&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#xFF09;">&#x6574;&#x6570;&#x4E2D;1&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#xFF08;&#x4ECE;1&#x5230;n&#x6574;&#x6570;&#x4E2D;1&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#xFF09;</h1>
 <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
-<p>&#x8F93;&#x5165;&#x4E24;&#x4E2A;&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x8F93;&#x51FA;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x5408;&#x6210;&#x540E;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5408;&#x6210;&#x540E;&#x7684;&#x94FE;&#x8868;&#x6EE1;&#x8DB3;&#x5355;&#x8C03;&#x4E0D;&#x51CF;&#x89C4;&#x5219;&#x3002;</p>
+<p>&#x6C42;&#x51FA;1~13&#x7684;&#x6574;&#x6570;&#x4E2D;1&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;,&#x5E76;&#x7B97;&#x51FA;100~1300&#x7684;&#x6574;&#x6570;&#x4E2D;1&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#xFF1F;&#x4E3A;&#x6B64;&#x4ED6;&#x7279;&#x522B;&#x6570;&#x4E86;&#x4E00;&#x4E0B;1~13&#x4E2D;&#x5305;&#x542B;1&#x7684;&#x6570;&#x5B57;&#x6709;1&#x3001;10&#x3001;11&#x3001;12&#x3001;13&#x56E0;&#x6B64;&#x5171;&#x51FA;&#x73B0;6&#x6B21;,&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x540E;&#x9762;&#x95EE;&#x9898;&#x4ED6;&#x5C31;&#x6CA1;&#x8F99;&#x4E86;&#x3002;ACMer&#x5E0C;&#x671B;&#x4F60;&#x4EEC;&#x5E2E;&#x5E2E;&#x4ED6;,&#x5E76;&#x628A;&#x95EE;&#x9898;&#x66F4;&#x52A0;&#x666E;&#x904D;&#x5316;,&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x7684;&#x6C42;&#x51FA;&#x4EFB;&#x610F;&#x975E;&#x8D1F;&#x6574;&#x6570;&#x533A;&#x95F4;&#x4E2D;1&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#xFF08;&#x4ECE;1 &#x5230; n &#x4E2D;1&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#xFF09;&#x3002;</p>
 <h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
-<ul>
-<li>Step1.&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x65B0;&#x94FE;&#x8868;&#x7684;&#x6307;&#x9488;,&#x6682;&#x4E14;&#x8BA9;&#x5B83;&#x6307;&#x5411;NULL; </li>
-<li>Step2.&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5934;&#x7ED3;&#x70B9;,&#x8BA9;&#x8F83;&#x5C0F;&#x7684;&#x5934;&#x7ED3;&#x70B9;&#x4F5C;&#x4E3A;&#x65B0;&#x94FE;&#x8868;&#x7684;&#x5934;&#x7ED3;&#x70B9;; </li>
-<li><p>Step3.&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x3002;</p>
-</li>
-<li><p>&#x9012;&#x5F52;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5176;&#x4F59;&#x8282;&#x70B9;,&#x8BA9;&#x8F83;&#x5C0F;&#x7684;&#x8282;&#x70B9;&#x4F5C;&#x4E3A;&#x4E0A;&#x4E00;&#x4E2A;&#x65B0;&#x8282;&#x70B9;&#x7684;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;;</p>
-</li>
-<li><p>&#x5FAA;&#x73AF;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5176;&#x4F59;&#x8282;&#x70B9;,&#x8BA9;&#x8F83;&#x5C0F;&#x7684;&#x8282;&#x70B9;&#x4F5C;&#x4E3A;&#x4E0A;&#x4E00;&#x4E2A;&#x65B0;&#x8282;&#x70B9;&#x7684;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;
-&#x76F4;&#x5230;&#x6709;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x6CA1;&#x6709;&#x8282;&#x70B9;,&#x7136;&#x540E;&#x5C06;&#x65B0;&#x94FE;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x76F4;&#x63A5;&#x6307;&#x5411;&#x5269;&#x4F59;&#x94FE;&#x8868;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
-</li>
-</ul>
+<p>&#x904D;&#x5386;&#x6BCF;&#x4E2A;&#x6570;&#x7684;1&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x4EE5;&#x4E2A;&#x4F4D;&#x4E3A;&#x5F00;&#x59CB;&#x4F4D;&#xFF0C;&#x5FAA;&#x73AF;&#x9664;&#x4E00;&#x4F4D;&#x4F9D;&#x6B21;&#x5224;&#x65AD;&#x5341;&#x4F4D;&#xFF0C;&#x767E;&#x4F4D;&#x3002;</p>
 <h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
-<p><strong><em>&#x975E;&#x9012;&#x5F52;</em></strong></p>
-<pre><code class="lang-java"><span class="hljs-comment">/*
-public class ListNode {
-    int val;
-    ListNode next = null;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}*/</span>
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">Merge</span><span class="hljs-params">(ListNode list1,ListNode list2)</span> </span>{
-        <span class="hljs-keyword">if</span>(list1 == <span class="hljs-keyword">null</span>){
-            <span class="hljs-keyword">return</span> list2;
-        }
-        <span class="hljs-keyword">if</span>(list2 == <span class="hljs-keyword">null</span>){
-            <span class="hljs-keyword">return</span> list1;
-        }
-        ListNode root = <span class="hljs-keyword">new</span> ListNode(-<span class="hljs-number">1</span>);
-        ListNode pointer = root;
-
-        <span class="hljs-keyword">while</span>(list1 !=<span class="hljs-keyword">null</span> &amp;&amp; list2 != <span class="hljs-keyword">null</span>){
-            <span class="hljs-keyword">if</span>(list1.val&lt;list2.val){
-                pointer.next = list1;
-                list1 = list1.next;
-            }<span class="hljs-keyword">else</span>{
-                pointer.next = list2;
-                list2 = list2.next;
-            }
-            pointer = pointer.next;
-        }
-        <span class="hljs-keyword">if</span>(list1 != <span class="hljs-keyword">null</span>){
-            pointer.next = list1;
-        }
-        <span class="hljs-keyword">if</span>(list2 !=<span class="hljs-keyword">null</span>){
-            pointer.next = list2;
-        }
-        <span class="hljs-keyword">return</span> root.next;
-    }
-}
-</code></pre>
-<p><strong><em>&#x9012;&#x5F52;</em></strong></p>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">Merge</span><span class="hljs-params">(ListNode list1,ListNode list2)</span> </span>{
-        <span class="hljs-keyword">if</span>(list1 == <span class="hljs-keyword">null</span>){
-            <span class="hljs-keyword">return</span> list2;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">NumberOf1Between1AndN_Solution</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+        <span class="hljs-keyword">int</span> number = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++){
+            number += NumberOf(i);
         }
+        <span class="hljs-keyword">return</span> number;
+    }
 
-        <span class="hljs-keyword">if</span>(list2 == <span class="hljs-keyword">null</span>){
-            <span class="hljs-keyword">return</span> list1;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">NumberOf</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span></span>{
+        <span class="hljs-keyword">int</span> number = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span>(n&gt;<span class="hljs-number">0</span>){
+            <span class="hljs-keyword">if</span>(n%<span class="hljs-number">10</span> == <span class="hljs-number">1</span>){
+                number++;
+            }
+            n =  n/<span class="hljs-number">10</span>;
         }
-        ListNode tmp = list1;
-        <span class="hljs-keyword">if</span>(list1.val&lt;list2.val){
-            tmp.next = Merge(list1.next,list2);
-        }<span class="hljs-keyword">else</span>{
-            tmp = list2;
-            tmp.next = Merge(list1,list2.next);
-        }
-        <span class="hljs-keyword">return</span> tmp;
+        <span class="hljs-keyword">return</span> number;
     }
 }
 </code></pre>
@@ -760,12 +709,12 @@ public class ListNode {
 
             
                 
-                <a href="反转链表.html" class="navigation navigation-prev " aria-label="Previous page: 0x15 反转链表">
+                <a href="连续子数组的最大和.html" class="navigation navigation-prev " aria-label="Previous page: 0x30 连续子数组的最大和">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="树的子结构.html" class="navigation navigation-next " aria-label="Next page: 0x17 树的子结构">
+                <a href="把数组排成最小的数.html" class="navigation navigation-next " aria-label="Next page: 0x32 把数组排成最小的数">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -776,7 +725,7 @@ public class ListNode {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"0x16 合并两个排序的链表","level":"2.16","depth":1,"next":{"title":"0x17 树的子结构","level":"2.17","depth":1,"path":"树的子结构.md","ref":"树的子结构.md","articles":[]},"previous":{"title":"0x15 反转链表","level":"2.15","depth":1,"path":"反转链表.md","ref":"反转链表.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"合并两个排序的链表.md","mtime":"2019-11-11T03:09:45.512Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-14T11:42:08.153Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0x31 整数中1出现的次数","level":"2.31","depth":1,"next":{"title":"0x32 把数组排成最小的数","level":"2.32","depth":1,"path":"把数组排成最小的数.md","ref":"把数组排成最小的数.md","articles":[]},"previous":{"title":"0x30 连续子数组的最大和","level":"2.30","depth":1,"path":"连续子数组的最大和.md","ref":"连续子数组的最大和.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"整数中1出现的次数.md","mtime":"2019-11-14T08:54:55.346Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-14T11:42:08.153Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
