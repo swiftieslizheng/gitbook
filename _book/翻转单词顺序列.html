@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>0x30 连续子数组的最大和 · GitBook</title>
+        <title>0x44 翻转单词顺序列 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="整数中1出现的次数.html" />
+    <link rel="next" href="扑克牌顺子.html" />
     
     
-    <link rel="prev" href="最小的K个数.html" />
+    <link rel="prev" href="左旋转字符串.html" />
     
 
     </head>
@@ -486,7 +486,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.30" data-path="连续子数组的最大和.html">
+        <li class="chapter " data-level="2.30" data-path="连续子数组的最大和.html">
             
                 <a href="连续子数组的最大和.html">
             
@@ -668,7 +668,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.44" data-path="翻转单词顺序列.html">
+        <li class="chapter active" data-level="2.44" data-path="翻转单词顺序列.html">
             
                 <a href="翻转单词顺序列.html">
             
@@ -796,7 +796,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >0x30 连续子数组的最大和</a>
+        <a href="." >0x44 翻转单词顺序列</a>
     </h1>
 </div>
 
@@ -811,69 +811,90 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;">&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;</h1>
+                                <h1 id="&#x7FFB;&#x8F6C;&#x5355;&#x8BCD;&#x987A;&#x5E8F;&#x5217;">&#x7FFB;&#x8F6C;&#x5355;&#x8BCD;&#x987A;&#x5E8F;&#x5217;</h1>
 <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
-<p>HZ&#x5076;&#x5C14;&#x4F1A;&#x62FF;&#x4E9B;&#x4E13;&#x4E1A;&#x95EE;&#x9898;&#x6765;&#x5FFD;&#x60A0;&#x90A3;&#x4E9B;&#x975E;&#x8BA1;&#x7B97;&#x673A;&#x4E13;&#x4E1A;&#x7684;&#x540C;&#x5B66;&#x3002;&#x4ECA;&#x5929;&#x6D4B;&#x8BD5;&#x7EC4;&#x5F00;&#x5B8C;&#x4F1A;&#x540E;,&#x4ED6;&#x53C8;&#x53D1;&#x8BDD;&#x4E86;:&#x5728;&#x53E4;&#x8001;&#x7684;&#x4E00;&#x7EF4;&#x6A21;&#x5F0F;&#x8BC6;&#x522B;&#x4E2D;,&#x5E38;&#x5E38;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x8FDE;&#x7EED;&#x5B50;&#x5411;&#x91CF;&#x7684;&#x6700;&#x5927;&#x548C;,&#x5F53;&#x5411;&#x91CF;&#x5168;&#x4E3A;&#x6B63;&#x6570;&#x7684;&#x65F6;&#x5019;,&#x95EE;&#x9898;&#x5F88;&#x597D;&#x89E3;&#x51B3;&#x3002;&#x4F46;&#x662F;,&#x5982;&#x679C;&#x5411;&#x91CF;&#x4E2D;&#x5305;&#x542B;&#x8D1F;&#x6570;,&#x662F;&#x5426;&#x5E94;&#x8BE5;&#x5305;&#x542B;&#x67D0;&#x4E2A;&#x8D1F;&#x6570;,&#x5E76;&#x671F;&#x671B;&#x65C1;&#x8FB9;&#x7684;&#x6B63;&#x6570;&#x4F1A;&#x5F25;&#x8865;&#x5B83;&#x5462;&#xFF1F;&#x4F8B;&#x5982;:{6,-3,-2,7,-15,1,2,2},&#x8FDE;&#x7EED;&#x5B50;&#x5411;&#x91CF;&#x7684;&#x6700;&#x5927;&#x548C;&#x4E3A;8(&#x4ECE;&#x7B2C;0&#x4E2A;&#x5F00;&#x59CB;,&#x5230;&#x7B2C;3&#x4E2A;&#x4E3A;&#x6B62;)&#x3002;&#x7ED9;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x6700;&#x5927;&#x8FDE;&#x7EED;&#x5B50;&#x5E8F;&#x5217;&#x7684;&#x548C;&#xFF0C;&#x4F60;&#x4F1A;&#x4E0D;&#x4F1A;&#x88AB;&#x4ED6;&#x5FFD;&#x60A0;&#x4F4F;&#xFF1F;(&#x5B50;&#x5411;&#x91CF;&#x7684;&#x957F;&#x5EA6;&#x81F3;&#x5C11;&#x662F;1)</p>
+<p>&#x725B;&#x5BA2;&#x6700;&#x8FD1;&#x6765;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x5458;&#x5DE5;Fish&#xFF0C;&#x6BCF;&#x5929;&#x65E9;&#x6668;&#x603B;&#x662F;&#x4F1A;&#x62FF;&#x7740;&#x4E00;&#x672C;&#x82F1;&#x6587;&#x6742;&#x5FD7;&#xFF0C;&#x5199;&#x4E9B;&#x53E5;&#x5B50;&#x5728;&#x672C;&#x5B50;&#x4E0A;&#x3002;&#x540C;&#x4E8B;Cat&#x5BF9;Fish&#x5199;&#x7684;&#x5185;&#x5BB9;&#x9887;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x6709;&#x4E00;&#x5929;&#x4ED6;&#x5411;Fish&#x501F;&#x6765;&#x7FFB;&#x770B;&#xFF0C;&#x4F46;&#x5374;&#x8BFB;&#x4E0D;&#x61C2;&#x5B83;&#x7684;&#x610F;&#x601D;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x201C;student. a am I&#x201D;&#x3002;&#x540E;&#x6765;&#x624D;&#x610F;&#x8BC6;&#x5230;&#xFF0C;&#x8FD9;&#x5BB6;&#x4F19;&#x539F;&#x6765;&#x628A;&#x53E5;&#x5B50;&#x5355;&#x8BCD;&#x7684;&#x987A;&#x5E8F;&#x7FFB;&#x8F6C;&#x4E86;&#xFF0C;&#x6B63;&#x786E;&#x7684;&#x53E5;&#x5B50;&#x5E94;&#x8BE5;&#x662F;&#x201C;I am a student.&#x201D;&#x3002;Cat&#x5BF9;&#x4E00;&#x4E00;&#x7684;&#x7FFB;&#x8F6C;&#x8FD9;&#x4E9B;&#x5355;&#x8BCD;&#x987A;&#x5E8F;&#x53EF;&#x4E0D;&#x5728;&#x884C;&#xFF0C;&#x4F60;&#x80FD;&#x5E2E;&#x52A9;&#x4ED6;&#x4E48;&#xFF1F;</p>
 <h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
-<p><strong><em>&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;</em></strong></p>
-<p>F&#xFF08;i&#xFF09;&#xFF1A;&#x4EE5;array[i]&#x4E3A;&#x672B;&#x5C3E;&#x5143;&#x7D20;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x548C;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x7684;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#x4E0D;&#x53D8; <br>
-F&#xFF08;i&#xFF09;=max&#xFF08;F&#xFF08;i-1&#xFF09;+array[i] &#xFF0C; array[i]&#xFF09;<br>
-res&#xFF1A;&#x6240;&#x6709;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x548C;&#x7684;&#x6700;&#x5927;&#x503C; <br>
-res=max&#xFF08;res&#xFF0C;F&#xFF08;i&#xFF09;&#xFF09;<br>
-&#x5982;&#x6570;&#x7EC4;[6, -3, -2, 7, -15, 1, 2, 2] <br></p>
-<p>&#x521D;&#x59CB;&#x72B6;&#x6001;&#xFF1A;<br>
-    F&#xFF08;0&#xFF09;=6 <br>
-    res=6 <br>
-i=1&#xFF1A; <br>
-    F&#xFF08;1&#xFF09;=max&#xFF08;F&#xFF08;0&#xFF09;-3&#xFF0C;-3&#xFF09;=max&#xFF08;6-3&#xFF0C;3&#xFF09;=3 <br>
-    res=max&#xFF08;F&#xFF08;1&#xFF09;&#xFF0C;res&#xFF09;=max&#xFF08;3&#xFF0C;6&#xFF09;=6 <br>
-i=2&#xFF1A;<br>
-    F&#xFF08;2&#xFF09;=max&#xFF08;F&#xFF08;1&#xFF09;-2&#xFF0C;-2&#xFF09;=max&#xFF08;3-2&#xFF0C;-2&#xFF09;=1
-    res=max&#xFF08;F&#xFF08;2&#xFF09;&#xFF0C;res&#xFF09;=max&#xFF08;1&#xFF0C;6&#xFF09;=6
-i=3&#xFF1A;<br>
-    F&#xFF08;3&#xFF09;=max&#xFF08;F&#xFF08;2&#xFF09;+7&#xFF0C;7&#xFF09;=max&#xFF08;1+7&#xFF0C;7&#xFF09;=8 <br>
-    res=max&#xFF08;F&#xFF08;2&#xFF09;&#xFF0C;res&#xFF09;=max&#xFF08;8&#xFF0C;6&#xFF09;=8 <br>
-i=4&#xFF1A;<br>
-    F&#xFF08;4&#xFF09;=max&#xFF08;F&#xFF08;3&#xFF09;-15&#xFF0C;-15&#xFF09;=max&#xFF08;8-15&#xFF0C;-15&#xFF09;=-7 <br>
-    res=max&#xFF08;F&#xFF08;4&#xFF09;&#xFF0C;res&#xFF09;=max&#xFF08;-7&#xFF0C;8&#xFF09;=8 <br>
-&#x4EE5;&#x6B64;&#x7C7B;&#x63A8; <br>
-&#x6700;&#x7EC8;res&#x7684;&#x503C;&#x4E3A;8 <br></p>
+<ol>
+<li><p>&#x4F7F;&#x7528;&#x6808;&#x548C;split&#x65B9;&#x6CD5;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;split&#x65B9;&#x6CD5;</p>
+</li>
+<li><p>&#x4E0D;&#x4F7F;&#x7528;split&#x65B9;&#x6CD5;&#xFF0C;&#x5148;&#x53CD;&#x8F6C;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x518D;&#x53CD;&#x8F6C;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#xFF0C;&#x5224;&#x65AD;&#x70B9;&#x4E3A;&#x7A7A;&#x683C;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x53CD;&#x8F6C;&#x3002;</p>
+</li>
+</ol>
 <h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">FindGreatestSumOfSubArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] array)</span> </span>{
-        <span class="hljs-keyword">int</span> res = array[<span class="hljs-number">0</span>];
-        <span class="hljs-keyword">int</span> max = array[<span class="hljs-number">0</span>];
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;array.length;i++){
-            max = Math.max(max+array[i],array[i]);
-            res = Math.max(res,max);
+<pre><code class="lang-java"><span class="hljs-comment">//&#x4F7F;&#x7528;&#x6808;&#x548C;split&#x65B9;&#x6CD5;</span>
+
+<span class="hljs-keyword">import</span> java.util.Stack;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">ReverseSentence</span><span class="hljs-params">(String str)</span> </span>{
+        <span class="hljs-keyword">if</span>(str.trim().equals(<span class="hljs-string">&quot;&quot;</span>)){
+            <span class="hljs-keyword">return</span> str;
         }
-        <span class="hljs-keyword">return</span> res;
+       Stack&lt;String&gt; stack = <span class="hljs-keyword">new</span> Stack&lt;&gt;();
+        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();
+        String[] s = str.split(<span class="hljs-string">&quot; &quot;</span>);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;s.length;i++){
+            stack.push(s[i]);
+        }
+        <span class="hljs-keyword">while</span>(!stack.isEmpty()){
+            sb.append(stack.pop()+<span class="hljs-string">&quot; &quot;</span>);
+        }
+        sb.deleteCharAt(sb.length()-<span class="hljs-number">1</span>);
+        <span class="hljs-keyword">return</span> sb.toString();
+    }
+}
+
+<span class="hljs-comment">//&#x4F7F;&#x7528;split&#x65B9;&#x6CD5;</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">ReverseSentence</span><span class="hljs-params">(String str)</span> </span>{
+        <span class="hljs-keyword">if</span>(str.trim().equals(<span class="hljs-string">&quot;&quot;</span>)){
+            <span class="hljs-keyword">return</span> str;
+        }
+        String[] a = str.split(<span class="hljs-string">&quot; &quot;</span>);
+        StringBuffer o = <span class="hljs-keyword">new</span> StringBuffer();
+        <span class="hljs-keyword">int</span> i;
+        <span class="hljs-keyword">for</span> (i = a.length; i &gt;<span class="hljs-number">0</span>;i--){
+            o.append(a[i-<span class="hljs-number">1</span>]);
+            <span class="hljs-keyword">if</span>(i &gt; <span class="hljs-number">1</span>){
+                o.append(<span class="hljs-string">&quot; &quot;</span>);
+            }
+        }
+        <span class="hljs-keyword">return</span> o.toString();
+    }
+}
+
+<span class="hljs-comment">//&#x4E0D;&#x4F7F;&#x7528;split&#x65B9;&#x6CD5;&#xFF0C;&#x5148;&#x53CD;&#x8F6C;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x518D;&#x53CD;&#x8F6C;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#xFF0C;&#x5224;&#x65AD;&#x70B9;&#x4E3A;&#x7A7A;&#x683C;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x53CD;&#x8F6C;</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">ReverseSentence</span><span class="hljs-params">(String str)</span> </span>{
+        <span class="hljs-keyword">char</span>[] chars = str.toCharArray();
+        reverseStr(chars,<span class="hljs-number">0</span>,chars.length-<span class="hljs-number">1</span>);
+        <span class="hljs-keyword">int</span> start = <span class="hljs-number">0</span>,end = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;chars.length;i++){
+            <span class="hljs-keyword">if</span>(chars[i] == <span class="hljs-string">&apos; &apos;</span>){
+                end = i-<span class="hljs-number">1</span>;
+                reverseStr(chars,start,end);
+                start = i+<span class="hljs-number">1</span>;
+            }
+        }
+        reverseStr(chars,start,chars.length-<span class="hljs-number">1</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> String(chars);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">reverseStr</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[] chars, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span> </span>{
+        <span class="hljs-keyword">while</span>(start&lt;end){
+            <span class="hljs-keyword">char</span> temp = chars[start];
+            chars[start] = chars[end];
+            chars[end] = temp;
+            start++;
+            end--;
+        }
     }
 }
 </code></pre>
-<h3 id="&#x65B9;&#x6CD5;&#x4E8C;">&#x65B9;&#x6CD5;&#x4E8C;</h3>
-<pre><code>
-public class Solution {
-     public int FindGreatestSumOfSubArray(int[] array) {
-         if (array.length==0 || array==null) {
-             return 0;
-         }
-         int curSum=0;
-         int greatestSum=0x80000000;
-         for (int i = 0; i &lt; array.length; i++) {
-             if (curSum&lt;=0) {
-                 curSum=array[i]; //&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x6700;&#x5927;&#x503C;
-             }else {
-                 curSum+=array[i]; //&#x5F53;array[i]&#x4E3A;&#x6B63;&#x6570;&#x65F6;&#xFF0C;&#x52A0;&#x4E0A;&#x4E4B;&#x524D;&#x7684;&#x6700;&#x5927;&#x503C;&#x5E76;&#x66F4;&#x65B0;&#x6700;&#x5927;&#x503C;&#x3002;
-             }
-             if (curSum&gt;greatestSum) {
-                 greatestSum=curSum; 
-             }
-         }
-         return greatestSum;
-     }
- }
-</code></pre>
+
                                 
                                 </section>
                             
@@ -900,12 +921,12 @@ public class Solution {
 
             
                 
-                <a href="最小的K个数.html" class="navigation navigation-prev " aria-label="Previous page: 0x29 最小的K个数">
+                <a href="左旋转字符串.html" class="navigation navigation-prev " aria-label="Previous page: 0x43 左旋转字符串">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="整数中1出现的次数.html" class="navigation navigation-next " aria-label="Next page: 0x31 整数中1出现的次数">
+                <a href="扑克牌顺子.html" class="navigation navigation-next " aria-label="Next page: 0x45 扑克牌顺子">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -916,7 +937,7 @@ public class Solution {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"0x30 连续子数组的最大和","level":"2.30","depth":1,"next":{"title":"0x31 整数中1出现的次数","level":"2.31","depth":1,"path":"整数中1出现的次数.md","ref":"整数中1出现的次数.md","articles":[]},"previous":{"title":"0x29 最小的K个数","level":"2.29","depth":1,"path":"最小的K个数.md","ref":"最小的K个数.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"连续子数组的最大和.md","mtime":"2019-11-14T08:55:10.218Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-15T16:06:51.696Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0x44 翻转单词顺序列","level":"2.44","depth":1,"next":{"title":"0x45 扑克牌顺子","level":"2.45","depth":1,"path":"扑克牌顺子.md","ref":"扑克牌顺子.md","articles":[]},"previous":{"title":"0x43 左旋转字符串","level":"2.43","depth":1,"path":"左旋转字符串.md","ref":"左旋转字符串.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"翻转单词顺序列.md","mtime":"2019-11-15T08:44:24.513Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-15T16:06:51.696Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
