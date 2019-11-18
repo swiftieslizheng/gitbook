@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="构建乘积数组.html" />
+    
     
     <link rel="prev" href="把字符串转换成整数.html" />
     
@@ -757,6 +759,32 @@
             
         </li>
     
+        <li class="chapter " data-level="2.51" data-path="构建乘积数组.html">
+            
+                <a href="构建乘积数组.html">
+            
+                    
+                    0x51 构建乘积数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.52" data-path="正则表达式匹配.html">
+            
+                <a href="正则表达式匹配.html">
+            
+                    
+                    0x52 正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -811,10 +839,22 @@
                                 
                                 <h1 id="&#x6570;&#x7EC4;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x6570;&#x5B57;">&#x6570;&#x7EC4;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x6570;&#x5B57;</h1>
 <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;n&#x7684;&#x6570;&#x7EC4;&#x91CC;&#x7684;&#x6240;&#x6709;&#x6570;&#x5B57;&#x90FD;&#x5728;0&#x5230;n-1&#x7684;&#x8303;&#x56F4;&#x5185;&#x3002; &#x6570;&#x7EC4;&#x4E2D;&#x67D0;&#x4E9B;&#x6570;&#x5B57;&#x662F;&#x91CD;&#x590D;&#x7684;&#xFF0C;&#x4F46;&#x4E0D;&#x77E5;&#x9053;&#x6709;&#x51E0;&#x4E2A;&#x6570;&#x5B57;&#x662F;&#x91CD;&#x590D;&#x7684;&#x3002;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x6BCF;&#x4E2A;&#x6570;&#x5B57;&#x91CD;&#x590D;&#x51E0;&#x6B21;&#x3002;&#x8BF7;&#x627E;&#x51FA;&#x6570;&#x7EC4;&#x4E2D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x91CD;&#x590D;&#x7684;&#x6570;&#x5B57;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x8F93;&#x5165;&#x957F;&#x5EA6;&#x4E3A;7&#x7684;&#x6570;&#x7EC4;{2,3,1,0,2,5,3}&#xFF0C;&#x90A3;&#x4E48;&#x5BF9;&#x5E94;&#x7684;&#x8F93;&#x51FA;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x91CD;&#x590D;&#x7684;&#x6570;&#x5B57;2&#x3002;</p>
 <h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
 <h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
-<pre><code class="lang-java">
-
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">duplicate</span><span class="hljs-params">(<span class="hljs-keyword">int</span> numbers[],<span class="hljs-keyword">int</span> length,<span class="hljs-keyword">int</span> [] duplication)</span> </span>{
+        <span class="hljs-keyword">boolean</span>[] k = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[length];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;k.length;i++){
+            <span class="hljs-keyword">if</span>(k[numbers[i]]){
+                duplication[<span class="hljs-number">0</span>] = numbers[i];
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+            k[numbers[i]]= <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}
 </code></pre>
 
                                 
@@ -843,10 +883,14 @@
 
             
                 
-                <a href="把字符串转换成整数.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 0x49 把字符串转换成整数">
+                <a href="把字符串转换成整数.html" class="navigation navigation-prev " aria-label="Previous page: 0x49 把字符串转换成整数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="构建乘积数组.html" class="navigation navigation-next " aria-label="Next page: 0x51 构建乘积数组">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -855,7 +899,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"0x50 数组中重复的数字","level":"2.50","depth":1,"previous":{"title":"0x49 把字符串转换成整数","level":"2.49","depth":1,"path":"把字符串转换成整数.md","ref":"把字符串转换成整数.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数组中重复的数字.md","mtime":"2019-11-15T16:06:46.460Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-15T16:06:51.696Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0x50 数组中重复的数字","level":"2.50","depth":1,"next":{"title":"0x51 构建乘积数组","level":"2.51","depth":1,"path":"构建乘积数组.md","ref":"构建乘积数组.md","articles":[]},"previous":{"title":"0x49 把字符串转换成整数","level":"2.49","depth":1,"path":"把字符串转换成整数.md","ref":"把字符串转换成整数.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数组中重复的数字.md","mtime":"2019-11-18T10:54:09.336Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-18T12:11:19.893Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -863,6 +907,10 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
