@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>0x13 调整数组顺序使奇数位于偶数前面 · GitBook</title>
+        <title>0x55 链表中环的入口结点 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="链表中倒数第k个结点.html" />
     
-    
-    <link rel="prev" href="数值的整数次方.html" />
+    <link rel="prev" href="字符流中第一个不重复的字符.html" />
     
 
     </head>
@@ -265,7 +263,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.13" data-path="调整数组顺序使奇数位于偶数前面.html">
+        <li class="chapter " data-level="2.13" data-path="调整数组顺序使奇数位于偶数前面.html">
             
                 <a href="调整数组顺序使奇数位于偶数前面.html">
             
@@ -811,7 +809,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.55" data-path="链表中环的入口结点.html">
+        <li class="chapter active" data-level="2.55" data-path="链表中环的入口结点.html">
             
                 <a href="链表中环的入口结点.html">
             
@@ -861,7 +859,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >0x13 调整数组顺序使奇数位于偶数前面</a>
+        <a href="." >0x55 链表中环的入口结点</a>
     </h1>
 </div>
 
@@ -876,25 +874,76 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8C03;&#x6574;&#x6570;&#x7EC4;&#x987A;&#x5E8F;&#x4F7F;&#x5947;&#x6570;&#x4F4D;&#x4E8E;&#x5076;&#x6570;&#x524D;&#x9762;">&#x8C03;&#x6574;&#x6570;&#x7EC4;&#x987A;&#x5E8F;&#x4F7F;&#x5947;&#x6570;&#x4F4D;&#x4E8E;&#x5076;&#x6570;&#x524D;&#x9762;</h1>
+                                <h1 id="&#x94FE;&#x8868;&#x4E2D;&#x73AF;&#x7684;&#x5165;&#x53E3;&#x7ED3;&#x70B9;">&#x94FE;&#x8868;&#x4E2D;&#x73AF;&#x7684;&#x5165;&#x53E3;&#x7ED3;&#x70B9;</h1>
 <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
-<p>&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4;&#xFF0C;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x8C03;&#x6574;&#x8BE5;&#x6570;&#x7EC4;&#x4E2D;&#x6570;&#x5B57;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x4F7F;&#x5F97;&#x6240;&#x6709;&#x7684;&#x5947;&#x6570;&#x4F4D;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x524D;&#x534A;&#x90E8;&#x5206;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5076;&#x6570;&#x4F4D;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x540E;&#x534A;&#x90E8;&#x5206;&#xFF0C;&#x5E76;&#x4FDD;&#x8BC1;&#x5947;&#x6570;&#x548C;&#x5947;&#x6570;&#xFF0C;&#x5076;&#x6570;&#x548C;&#x5076;&#x6570;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#x4E0D;&#x53D8;&#x3002;</p>
+<p>&#x7ED9;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x82E5;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x73AF;&#xFF0C;&#x8BF7;&#x627E;&#x51FA;&#x8BE5;&#x94FE;&#x8868;&#x7684;&#x73AF;&#x7684;&#x5165;&#x53E3;&#x7ED3;&#x70B9;&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x8F93;&#x51FA;null&#x3002;</p>
 <h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
-<p>&#x9996;&#x5148;&#x60F3;&#x5230;&#x7684;&#x5C31;&#x662F;&#x7C7B;&#x4F3C;&#x4E8E;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#xFF0C;&#x800C;&#x4E14;&#x6211;&#x611F;&#x89C9;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#xFF0C;&#x6BD5;&#x7ADF;&#x4E0D;&#x7528;&#x501F;&#x52A9;&#x5176;&#x4ED6;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;
-&#x6240;&#x4EE5;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O&#xFF08;1&#xFF09;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O&#xFF08;N^2&#xFF09;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">reOrderArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span> [] array)</span> </span>{
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;array.length;i++){
-            <span class="hljs-keyword">int</span> target = array[i];
-            <span class="hljs-keyword">if</span>(array[i] % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>){
-                <span class="hljs-keyword">int</span> j = i;
-                <span class="hljs-keyword">while</span>(j &gt;= <span class="hljs-number">1</span> &amp;&amp; array[j-<span class="hljs-number">1</span>] % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>){
-                    array[j] = array[j-<span class="hljs-number">1</span>];
-                    j--;
-                }
-                array[j] = target;
+<p>1 . <strong><em>&#x5FEB;&#x6162;&#x6307;&#x9488;&#x6CD5;</em></strong></p>
+<p><strong><em>&#x4E24;&#x4E2A;&#x7ED3;&#x8BBA;&#xFF1A;</em></strong><br></p>
+<ul>
+<li>1&#x3001;&#x8BBE;&#x7F6E;&#x5FEB;&#x6162;&#x6307;&#x9488;&#xFF0C;&#x5047;&#x5982;&#x6709;&#x73AF;&#xFF0C;&#x4ED6;&#x4EEC;&#x6700;&#x540E;&#x4E00;&#x5B9A;&#x76F8;&#x9047;&#x3002;</li>
+<li><p>2&#x3001;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x5206;&#x522B;&#x4ECE;&#x94FE;&#x8868;&#x5934;&#x548C;&#x76F8;&#x9047;&#x70B9;&#x7EE7;&#x7EED;&#x51FA;&#x53D1;&#xFF0C;&#x6BCF;&#x6B21;&#x8D70;&#x4E00;&#x6B65;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x5B9A;&#x76F8;&#x9047;&#x4E0E;&#x73AF;&#x5165;&#x53E3;&#x3002;</p>
+</li>
+<li><p>&#x8BC1;&#x660E;&#x7ED3;&#x8BBA; 1&#xFF1A;&#x8BBE;&#x7F6E;&#x5FEB;&#x6162;&#x6307;&#x9488;fast&#x548C;low&#xFF0C;fast&#x6BCF;&#x6B21;&#x8D70;&#x4E24;&#x6B65;&#xFF0C;low&#x6BCF;&#x6B21;&#x8D70;&#x4E00;&#x6B65;&#x3002;&#x5047;&#x5982;&#x6709;&#x73AF;&#xFF0C;&#x4E24;&#x8005;&#x4E00;&#x5B9A;&#x4F1A;&#x76F8;&#x9047;&#xFF08;&#x56E0;&#x4E3A;low&#x4E00;&#x65E6;&#x8FDB;&#x73AF;&#xFF0C;&#x53EF;&#x770B;&#x4F5C;fast&#x5728;&#x540E;&#x9762;&#x8FFD;&#x8D76;low&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x6BCF;&#x6B21;&#x4E24;&#x8005;&#x90FD;&#x63A5;&#x8FD1;&#x4E00;&#x6B65;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x5B9A;&#x80FD;&#x8FFD;&#x4E0A;&#xFF09;&#x3002;</p>
+</li>
+<li>&#x8BC1;&#x660E;&#x7ED3;&#x8BBA; 2&#xFF1A;<br>
+&#x8BBE;&#xFF1A;<br>
+&#x94FE;&#x8868;&#x5934;&#x5230;&#x73AF;&#x5165;&#x53E3;&#x957F;&#x5EA6;&#x4E3A;--a<br>
+&#x73AF;&#x5165;&#x53E3;&#x5230;&#x76F8;&#x9047;&#x70B9;&#x957F;&#x5EA6;&#x4E3A;--b<br>
+&#x76F8;&#x9047;&#x70B9;&#x5230;&#x73AF;&#x5165;&#x53E3;&#x957F;&#x5EA6;&#x4E3A;--c<br></li>
+</ul>
+<p><img src="https://uploadfiles.nowcoder.com/images/20180615/4240377_1529033184336_9A253E69EDBB4FD57BB16FC3A32C2756" alt="https://uploadfiles.nowcoder.com/images/20180615/4240377_1529033184336_9A253E69EDBB4FD57BB16FC3A32C2756"></p>
+<p>&#x5219;&#xFF1A;&#x76F8;&#x9047;&#x65F6;<br>
+&#x5FEB;&#x6307;&#x9488;&#x8DEF;&#x7A0B;= a+(b+c)k+b &#xFF0C;k&gt;=1  &#x5176;&#x4E2D;b+c&#x4E3A;&#x73AF;&#x7684;&#x957F;&#x5EA6;&#xFF0C;k&#x4E3A;&#x7ED5;&#x73AF;&#x7684;&#x5708;&#x6570;&#xFF08;k&gt;=1,&#x5373;&#x6700;&#x5C11;&#x4E00;&#x5708;&#xFF0C;&#x4E0D;&#x80FD;&#x662F;0&#x5708;&#xFF0C;&#x4E0D;&#x7136;&#x548C;&#x6162;&#x6307;&#x9488;&#x8D70;&#x7684;&#x4E00;&#x6837;&#x957F;&#xFF0C;&#x77DB;&#x76FE;&#xFF09;&#x3002;<br>
+&#x6162;&#x6307;&#x9488;&#x8DEF;&#x7A0B;= a+b<br>
+&#x5FEB;&#x6307;&#x9488;&#x8D70;&#x7684;&#x8DEF;&#x7A0B;&#x662F;&#x6162;&#x6307;&#x9488;&#x7684;&#x4E24;&#x500D;&#xFF0C;&#x6240;&#x4EE5;&#xFF1A;<br></p>
+<h5 id="ab2abckb">(a+b)*2=a+(b+c)k+b</h5>
+<p>&#x5316;&#x7B80;&#x53EF;&#x5F97;&#xFF1A;<br>
+a=(k-1)(b+c)+c &#x8FD9;&#x4E2A;&#x5F0F;&#x5B50;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF1A; &#x94FE;&#x8868;&#x5934;&#x5230;&#x73AF;&#x5165;&#x53E3;&#x7684;&#x8DDD;&#x79BB;=&#x76F8;&#x9047;&#x70B9;&#x5230;&#x73AF;&#x5165;&#x53E3;&#x7684;&#x8DDD;&#x79BB;+&#xFF08;k-1&#xFF09;&#x5708;&#x73AF;&#x957F;&#x5EA6;&#x3002;&#x5176;&#x4E2D;k&gt;=1,&#x6240;&#x4EE5;k-1&gt;=0&#x5708;&#x3002;&#x6240;&#x4EE5;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x5206;&#x522B;&#x4ECE;&#x94FE;&#x8868;&#x5934;&#x548C;&#x76F8;&#x9047;&#x70B9;&#x51FA;&#x53D1;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x5B9A;&#x76F8;&#x9047;&#x4E8E;&#x73AF;&#x5165;&#x53E3;&#x3002;</p>
+<h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">EntryNodeOfLoop</span><span class="hljs-params">(ListNode pHead)</span>
+    </span>{
+        ListNode fast=pHead;
+        ListNode low=pHead;
+        <span class="hljs-keyword">while</span>(fast!=<span class="hljs-keyword">null</span>&amp;&amp;fast.next!=<span class="hljs-keyword">null</span>){
+            fast=fast.next.next;
+            low=low.next;
+            <span class="hljs-keyword">if</span>(fast==low)
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">if</span>(fast==<span class="hljs-keyword">null</span>||fast.next==<span class="hljs-keyword">null</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        low=pHead;
+        <span class="hljs-keyword">while</span>(fast!=low){
+            fast=fast.next;
+            low=low.next;
+        }
+        <span class="hljs-keyword">return</span> low;
+    }
+}
+</code></pre>
+<p>2 . <strong><em>HashMap</em></strong></p>
+<h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    HashMap&lt;ListNode,Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">EntryNodeOfLoop</span><span class="hljs-params">(ListNode pHead)</span>
+    </span>{
+        ListNode temp = pHead;
+        <span class="hljs-keyword">while</span>(temp !=<span class="hljs-keyword">null</span>){
+            <span class="hljs-keyword">if</span>(map.containsKey(temp)){
+                <span class="hljs-keyword">return</span> temp;
+            }<span class="hljs-keyword">else</span>{
+                map.put(temp,<span class="hljs-number">1</span>);
+                temp = temp.next;
             }
         }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
     }
+}
 </code></pre>
 
                                 
@@ -923,14 +972,10 @@
 
             
                 
-                <a href="数值的整数次方.html" class="navigation navigation-prev " aria-label="Previous page: 0x12 数值的整数次方">
+                <a href="字符流中第一个不重复的字符.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 0x54 字符流中第一个不重复的字符">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="链表中倒数第k个结点.html" class="navigation navigation-next " aria-label="Next page: 0x14 链表中倒数第k个结点">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -939,7 +984,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"0x13 调整数组顺序使奇数位于偶数前面","level":"2.13","depth":1,"next":{"title":"0x14 链表中倒数第k个结点","level":"2.14","depth":1,"path":"链表中倒数第k个结点.md","ref":"链表中倒数第k个结点.md","articles":[]},"previous":{"title":"0x12 数值的整数次方","level":"2.12","depth":1,"path":"数值的整数次方.md","ref":"数值的整数次方.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"调整数组顺序使奇数位于偶数前面.md","mtime":"2019-11-11T03:09:12.676Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-19T12:50:08.854Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0x55 链表中环的入口结点","level":"2.55","depth":1,"previous":{"title":"0x54 字符流中第一个不重复的字符","level":"2.54","depth":1,"path":"字符流中第一个不重复的字符.md","ref":"字符流中第一个不重复的字符.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"链表中环的入口结点.md","mtime":"2019-11-19T12:41:34.431Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-19T12:50:08.854Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

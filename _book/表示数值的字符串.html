@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>0x13 调整数组顺序使奇数位于偶数前面 · GitBook</title>
+        <title>0x53 表示数值的字符串 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="链表中倒数第k个结点.html" />
+    <link rel="next" href="字符流中第一个不重复的字符.html" />
     
     
-    <link rel="prev" href="数值的整数次方.html" />
+    <link rel="prev" href="正则表达式匹配.html" />
     
 
     </head>
@@ -265,7 +265,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.13" data-path="调整数组顺序使奇数位于偶数前面.html">
+        <li class="chapter " data-level="2.13" data-path="调整数组顺序使奇数位于偶数前面.html">
             
                 <a href="调整数组顺序使奇数位于偶数前面.html">
             
@@ -785,7 +785,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.53" data-path="表示数值的字符串.html">
+        <li class="chapter active" data-level="2.53" data-path="表示数值的字符串.html">
             
                 <a href="表示数值的字符串.html">
             
@@ -861,7 +861,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >0x13 调整数组顺序使奇数位于偶数前面</a>
+        <a href="." >0x53 表示数值的字符串</a>
     </h1>
 </div>
 
@@ -876,25 +876,52 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8C03;&#x6574;&#x6570;&#x7EC4;&#x987A;&#x5E8F;&#x4F7F;&#x5947;&#x6570;&#x4F4D;&#x4E8E;&#x5076;&#x6570;&#x524D;&#x9762;">&#x8C03;&#x6574;&#x6570;&#x7EC4;&#x987A;&#x5E8F;&#x4F7F;&#x5947;&#x6570;&#x4F4D;&#x4E8E;&#x5076;&#x6570;&#x524D;&#x9762;</h1>
+                                <h1 id="&#x8868;&#x793A;&#x6570;&#x503C;&#x7684;&#x5B57;&#x7B26;&#x4E32;">&#x8868;&#x793A;&#x6570;&#x503C;&#x7684;&#x5B57;&#x7B26;&#x4E32;</h1>
 <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
-<p>&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4;&#xFF0C;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x8C03;&#x6574;&#x8BE5;&#x6570;&#x7EC4;&#x4E2D;&#x6570;&#x5B57;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x4F7F;&#x5F97;&#x6240;&#x6709;&#x7684;&#x5947;&#x6570;&#x4F4D;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x524D;&#x534A;&#x90E8;&#x5206;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5076;&#x6570;&#x4F4D;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x540E;&#x534A;&#x90E8;&#x5206;&#xFF0C;&#x5E76;&#x4FDD;&#x8BC1;&#x5947;&#x6570;&#x548C;&#x5947;&#x6570;&#xFF0C;&#x5076;&#x6570;&#x548C;&#x5076;&#x6570;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#x4E0D;&#x53D8;&#x3002;</p>
+<p>&#x8BF7;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7528;&#x6765;&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x8868;&#x793A;&#x6570;&#x503C;&#xFF08;&#x5305;&#x62EC;&#x6574;&#x6570;&#x548C;&#x5C0F;&#x6570;&#xFF09;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&quot;+100&quot;,&quot;5e2&quot;,&quot;-123&quot;,&quot;3.1416&quot;&#x548C;&quot;-1E-16&quot;&#x90FD;&#x8868;&#x793A;&#x6570;&#x503C;&#x3002; &#x4F46;&#x662F;&quot;12e&quot;,&quot;1a3.14&quot;,&quot;1.2.3&quot;,&quot;+-5&quot;&#x548C;&quot;12e+4.3&quot;&#x90FD;&#x4E0D;&#x662F;&#x3002;</p>
 <h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
-<p>&#x9996;&#x5148;&#x60F3;&#x5230;&#x7684;&#x5C31;&#x662F;&#x7C7B;&#x4F3C;&#x4E8E;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#xFF0C;&#x800C;&#x4E14;&#x6211;&#x611F;&#x89C9;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#xFF0C;&#x6BD5;&#x7ADF;&#x4E0D;&#x7528;&#x501F;&#x52A9;&#x5176;&#x4ED6;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;
-&#x6240;&#x4EE5;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O&#xFF08;1&#xFF09;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O&#xFF08;N^2&#xFF09;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">reOrderArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span> [] array)</span> </span>{
-        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;array.length;i++){
-            <span class="hljs-keyword">int</span> target = array[i];
-            <span class="hljs-keyword">if</span>(array[i] % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>){
-                <span class="hljs-keyword">int</span> j = i;
-                <span class="hljs-keyword">while</span>(j &gt;= <span class="hljs-number">1</span> &amp;&amp; array[j-<span class="hljs-number">1</span>] % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>){
-                    array[j] = array[j-<span class="hljs-number">1</span>];
-                    j--;
-                }
-                array[j] = target;
-            }
+<h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isNumeric</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[] str)</span> </span>{
+        <span class="hljs-keyword">if</span> (str.length==<span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">boolean</span> flag = scanInteger(str);
+
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x51FA;&#x73B0;&apos;.&apos;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x662F;&#x6570;&#x5B57;&#x7684;&#x5C0F;&#x6570;&#x90E8;&#x5206;</span>
+        <span class="hljs-keyword">if</span> (index &lt; str.length &amp;&amp; str[index] == <span class="hljs-string">&apos;.&apos;</span>) {
+            index++;
+            <span class="hljs-comment">// &#x4E0B;&#x9762;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x7528;||&#x7684;&#x539F;&#x56E0;&#xFF1A;</span>
+            <span class="hljs-comment">// 1. &#x5C0F;&#x6570;&#x53EF;&#x4EE5;&#x6CA1;&#x6709;&#x6574;&#x6570;&#x90E8;&#x5206;&#xFF0C;&#x4F8B;&#x5982;.123&#x7B49;&#x4E8E;0.123&#xFF1B;</span>
+            <span class="hljs-comment">// 2. &#x5C0F;&#x6570;&#x70B9;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x6CA1;&#x6709;&#x6570;&#x5B57;&#xFF0C;&#x4F8B;&#x5982;233.&#x7B49;&#x4E8E;233.0&#xFF1B;</span>
+            <span class="hljs-comment">// 3. &#x5F53;&#x7136;&#x5C0F;&#x6570;&#x70B9;&#x524D;&#x9762;&#x548C;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x6709;&#x6570;&#x5B57;&#xFF0C;&#x4F8B;&#x5982;233.666</span>
+            flag = scanUnsignedInteger(str) || flag;
         }
+
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x51FA;&#x73B0;&apos;e&apos;&#x6216;&#x8005;&apos;E&apos;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x8DDF;&#x7740;&#x7684;&#x662F;&#x6570;&#x5B57;&#x7684;&#x6307;&#x6570;&#x90E8;&#x5206;</span>
+        <span class="hljs-keyword">if</span> (index &lt; str.length &amp;&amp; (str[index] == <span class="hljs-string">&apos;E&apos;</span> || str[index] == <span class="hljs-string">&apos;e&apos;</span>)) {
+            index++;
+            <span class="hljs-comment">// &#x4E0B;&#x9762;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x7528;&amp;&amp;&#x7684;&#x539F;&#x56E0;&#xFF1A;</span>
+            <span class="hljs-comment">// 1. &#x5F53;e&#x6216;E&#x524D;&#x9762;&#x6CA1;&#x6709;&#x6570;&#x5B57;&#x65F6;&#xFF0C;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x80FD;&#x8868;&#x793A;&#x6570;&#x5B57;&#xFF0C;&#x4F8B;&#x5982;.e1&#x3001;e1&#xFF1B;</span>
+            <span class="hljs-comment">// 2. &#x5F53;e&#x6216;E&#x540E;&#x9762;&#x6CA1;&#x6709;&#x6574;&#x6570;&#x65F6;&#xFF0C;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x80FD;&#x8868;&#x793A;&#x6570;&#x5B57;&#xFF0C;&#x4F8B;&#x5982;12e&#x3001;12e+5.4</span>
+            flag = flag &amp;&amp; scanInteger(str);
+        }
+        <span class="hljs-keyword">return</span> flag &amp;&amp; index == str.length;
     }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">scanInteger</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[] str)</span> </span>{
+        <span class="hljs-keyword">if</span> (index &lt; str.length &amp;&amp; (str[index] == <span class="hljs-string">&apos;+&apos;</span> || str[index] == <span class="hljs-string">&apos;-&apos;</span>) )
+            index++;
+        <span class="hljs-keyword">return</span> scanUnsignedInteger(str);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">scanUnsignedInteger</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[] str)</span> </span>{
+        <span class="hljs-keyword">int</span> start = index;
+        <span class="hljs-keyword">while</span> (index &lt; str.length &amp;&amp; str[index] &gt;= <span class="hljs-string">&apos;0&apos;</span> &amp;&amp; str[index] &lt;= <span class="hljs-string">&apos;9&apos;</span>)
+            index++;
+        <span class="hljs-comment">// &#x5F53;str&#x4E2D;&#x5B58;&#x5728;&#x82E5;&#x5E72;0-9&#x7684;&#x6570;&#x5B57;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;true</span>
+        <span class="hljs-keyword">return</span> start &lt; index; 
+    }
+}
 </code></pre>
 
                                 
@@ -923,12 +950,12 @@
 
             
                 
-                <a href="数值的整数次方.html" class="navigation navigation-prev " aria-label="Previous page: 0x12 数值的整数次方">
+                <a href="正则表达式匹配.html" class="navigation navigation-prev " aria-label="Previous page: 0x52 正则表达式匹配">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="链表中倒数第k个结点.html" class="navigation navigation-next " aria-label="Next page: 0x14 链表中倒数第k个结点">
+                <a href="字符流中第一个不重复的字符.html" class="navigation navigation-next " aria-label="Next page: 0x54 字符流中第一个不重复的字符">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -939,7 +966,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"0x13 调整数组顺序使奇数位于偶数前面","level":"2.13","depth":1,"next":{"title":"0x14 链表中倒数第k个结点","level":"2.14","depth":1,"path":"链表中倒数第k个结点.md","ref":"链表中倒数第k个结点.md","articles":[]},"previous":{"title":"0x12 数值的整数次方","level":"2.12","depth":1,"path":"数值的整数次方.md","ref":"数值的整数次方.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"调整数组顺序使奇数位于偶数前面.md","mtime":"2019-11-11T03:09:12.676Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-19T12:50:08.854Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0x53 表示数值的字符串","level":"2.53","depth":1,"next":{"title":"0x54 字符流中第一个不重复的字符","level":"2.54","depth":1,"path":"字符流中第一个不重复的字符.md","ref":"字符流中第一个不重复的字符.md","articles":[]},"previous":{"title":"0x52 正则表达式匹配","level":"2.52","depth":1,"path":"正则表达式匹配.md","ref":"正则表达式匹配.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"表示数值的字符串.md","mtime":"2019-11-19T07:46:47.312Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-19T12:50:08.854Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
