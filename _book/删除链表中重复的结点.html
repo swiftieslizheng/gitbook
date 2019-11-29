@@ -1,0 +1,1160 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>0x56 删除链表中重复的结点 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="二叉树的下一个结点.html" />
+    
+    
+    <link rel="prev" href="链表中环的入口结点.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">I 剑指offer</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="二维数组中的查找.html">
+            
+                <a href="二维数组中的查找.html">
+            
+                    
+                    0x1 二维数组中的查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="替换空格.html">
+            
+                <a href="替换空格.html">
+            
+                    
+                    0x2 替换空格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="从尾到头打印链表.html">
+            
+                <a href="从尾到头打印链表.html">
+            
+                    
+                    0x3 从尾到头打印链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="重建二叉树.html">
+            
+                <a href="重建二叉树.html">
+            
+                    
+                    0x4 重建二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="用两个栈实现队列.html">
+            
+                <a href="用两个栈实现队列.html">
+            
+                    
+                    0x5 用两个栈实现队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="旋转数组的最小数字.html">
+            
+                <a href="旋转数组的最小数字.html">
+            
+                    
+                    0x6 旋转数组的最小数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="斐波那契数列.html">
+            
+                <a href="斐波那契数列.html">
+            
+                    
+                    0x7 斐波那契数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="跳台阶.html">
+            
+                <a href="跳台阶.html">
+            
+                    
+                    0x8 跳台阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="变态跳台阶.html">
+            
+                <a href="变态跳台阶.html">
+            
+                    
+                    0x9 变态跳台阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="矩形覆盖.html">
+            
+                <a href="矩形覆盖.html">
+            
+                    
+                    0x10 矩形覆盖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="二进制中1的个数.html">
+            
+                <a href="二进制中1的个数.html">
+            
+                    
+                    0x11 二进制中1的个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="数值的整数次方.html">
+            
+                <a href="数值的整数次方.html">
+            
+                    
+                    0x12 数值的整数次方
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="调整数组顺序使奇数位于偶数前面.html">
+            
+                <a href="调整数组顺序使奇数位于偶数前面.html">
+            
+                    
+                    0x13 调整数组顺序使奇数位于偶数前面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="链表中倒数第k个结点.html">
+            
+                <a href="链表中倒数第k个结点.html">
+            
+                    
+                    0x14 链表中倒数第k个结点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="反转链表.html">
+            
+                <a href="反转链表.html">
+            
+                    
+                    0x15 反转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="合并两个排序的链表.html">
+            
+                <a href="合并两个排序的链表.html">
+            
+                    
+                    0x16 合并两个排序的链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="树的子结构.html">
+            
+                <a href="树的子结构.html">
+            
+                    
+                    0x17 树的子结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="二叉树的镜像.html">
+            
+                <a href="二叉树的镜像.html">
+            
+                    
+                    0x18 二叉树的镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="顺时针打印矩阵.html">
+            
+                <a href="顺时针打印矩阵.html">
+            
+                    
+                    0x19 顺时针打印矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="包含min函数的栈.html">
+            
+                <a href="包含min函数的栈.html">
+            
+                    
+                    0x20 包含min函数的栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.21" data-path="栈的压入、弹出序列.html">
+            
+                <a href="栈的压入、弹出序列.html">
+            
+                    
+                    0x21 栈的压入、弹出序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.22" data-path="从上往下打印二叉树.html">
+            
+                <a href="从上往下打印二叉树.html">
+            
+                    
+                    0x22 从上往下打印二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.23" data-path="二叉搜索树的后序遍历序列.html">
+            
+                <a href="二叉搜索树的后序遍历序列.html">
+            
+                    
+                    0x23 二叉搜索树的后序遍历序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.24" data-path="二叉树中和为某一值的路径.html">
+            
+                <a href="二叉树中和为某一值的路径.html">
+            
+                    
+                    0x24 二叉树中和为某一值的路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.25" data-path="复杂链表的复制.html">
+            
+                <a href="复杂链表的复制.html">
+            
+                    
+                    0x25 复杂链表的复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.26" data-path="二叉搜索树与双向链表.html">
+            
+                <a href="二叉搜索树与双向链表.html">
+            
+                    
+                    0x26 二叉搜索树与双向链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.27" data-path="字符串的排列.html">
+            
+                <a href="字符串的排列.html">
+            
+                    
+                    0x27 字符串的排列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.28" data-path="数组中出现次数超过一半的数字.html">
+            
+                <a href="数组中出现次数超过一半的数字.html">
+            
+                    
+                    0x28 数组中出现次数超过一半的数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.29" data-path="最小的K个数.html">
+            
+                <a href="最小的K个数.html">
+            
+                    
+                    0x29 最小的K个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.30" data-path="连续子数组的最大和.html">
+            
+                <a href="连续子数组的最大和.html">
+            
+                    
+                    0x30 连续子数组的最大和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.31" data-path="整数中1出现的次数.html">
+            
+                <a href="整数中1出现的次数.html">
+            
+                    
+                    0x31 整数中1出现的次数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.32" data-path="把数组排成最小的数.html">
+            
+                <a href="把数组排成最小的数.html">
+            
+                    
+                    0x32 把数组排成最小的数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.33" data-path="丑数.html">
+            
+                <a href="丑数.html">
+            
+                    
+                    0x33 丑数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.34" data-path="第一个只出现一次的字符.html">
+            
+                <a href="第一个只出现一次的字符.html">
+            
+                    
+                    0x34 第一个只出现一次的字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.35" data-path="数组中的逆序对.html">
+            
+                <a href="数组中的逆序对.html">
+            
+                    
+                    0x35 数组中的逆序对
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.36" data-path="两个链表的第一个公共结点.html">
+            
+                <a href="两个链表的第一个公共结点.html">
+            
+                    
+                    0x36 两个链表的第一个公共结点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.37" data-path="数字在排序数组中出现的次数.html">
+            
+                <a href="数字在排序数组中出现的次数.html">
+            
+                    
+                    0x37 数字在排序数组中出现的次数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.38" data-path="二叉树的深度.html">
+            
+                <a href="二叉树的深度.html">
+            
+                    
+                    0x38 二叉树的深度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.39" data-path="平衡二叉树.html">
+            
+                <a href="平衡二叉树.html">
+            
+                    
+                    0x39 平衡二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.40" data-path="数组中只出现一次的数字.html">
+            
+                <a href="数组中只出现一次的数字.html">
+            
+                    
+                    0x40 数组中只出现一次的数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.41" data-path="和为S的连续正数序列.html">
+            
+                <a href="和为S的连续正数序列.html">
+            
+                    
+                    0x41 和为S的连续正数序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.42" data-path="和为S的两个数字.html">
+            
+                <a href="和为S的两个数字.html">
+            
+                    
+                    0x42 和为S的两个数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.43" data-path="左旋转字符串.html">
+            
+                <a href="左旋转字符串.html">
+            
+                    
+                    0x43 左旋转字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.44" data-path="翻转单词顺序列.html">
+            
+                <a href="翻转单词顺序列.html">
+            
+                    
+                    0x44 翻转单词顺序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.45" data-path="扑克牌顺子.html">
+            
+                <a href="扑克牌顺子.html">
+            
+                    
+                    0x45 扑克牌顺子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.46" data-path="圆圈中最后剩下的数.html">
+            
+                <a href="圆圈中最后剩下的数.html">
+            
+                    
+                    0x46 圆圈中最后剩下的数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.47" data-path="求1+2+3+...+n.html">
+            
+                <a href="求1+2+3+...+n.html">
+            
+                    
+                    0x47 求1+2+3+...+n
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.48" data-path="不用加减乘除做加法.html">
+            
+                <a href="不用加减乘除做加法.html">
+            
+                    
+                    0x48 不用加减乘除做加法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.49" data-path="把字符串转换成整数.html">
+            
+                <a href="把字符串转换成整数.html">
+            
+                    
+                    0x49 把字符串转换成整数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.50" data-path="数组中重复的数字.html">
+            
+                <a href="数组中重复的数字.html">
+            
+                    
+                    0x50 数组中重复的数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.51" data-path="构建乘积数组.html">
+            
+                <a href="构建乘积数组.html">
+            
+                    
+                    0x51 构建乘积数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.52" data-path="正则表达式匹配.html">
+            
+                <a href="正则表达式匹配.html">
+            
+                    
+                    0x52 正则表达式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.53" data-path="表示数值的字符串.html">
+            
+                <a href="表示数值的字符串.html">
+            
+                    
+                    0x53 表示数值的字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.54" data-path="字符流中第一个不重复的字符.html">
+            
+                <a href="字符流中第一个不重复的字符.html">
+            
+                    
+                    0x54 字符流中第一个不重复的字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.55" data-path="链表中环的入口结点.html">
+            
+                <a href="链表中环的入口结点.html">
+            
+                    
+                    0x55 链表中环的入口结点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.56" data-path="删除链表中重复的结点.html">
+            
+                <a href="删除链表中重复的结点.html">
+            
+                    
+                    0x56 删除链表中重复的结点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.57" data-path="二叉树的下一个结点.html">
+            
+                <a href="二叉树的下一个结点.html">
+            
+                    
+                    0x57 二叉树的下一个结点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.58" data-path="对称的二叉树.html">
+            
+                <a href="对称的二叉树.html">
+            
+                    
+                    0x58 对称的二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.59" data-path="按之字形顺序打印二叉树.html">
+            
+                <a href="按之字形顺序打印二叉树.html">
+            
+                    
+                    0x59 按之字形顺序打印二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.60" data-path="把二叉树打印成多行.html">
+            
+                <a href="把二叉树打印成多行.html">
+            
+                    
+                    0x60 把二叉树打印成多行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.61" data-path="序列化二叉树.html">
+            
+                <a href="序列化二叉树.html">
+            
+                    
+                    0x61 序列化二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.62" data-path="二叉搜索树的第k个结点.html">
+            
+                <a href="二叉搜索树的第k个结点.html">
+            
+                    
+                    0x62 二叉搜索树的第k个结点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.63" data-path="数据流中的中位数.html">
+            
+                <a href="数据流中的中位数.html">
+            
+                    
+                    0x63 数据流中的中位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.64" data-path="滑动窗口的最大值.html">
+            
+                <a href="滑动窗口的最大值.html">
+            
+                    
+                    0x64 滑动窗口的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.65" data-path="矩阵中的路径.html">
+            
+                <a href="矩阵中的路径.html">
+            
+                    
+                    0x65 矩阵中的路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.66" data-path="机器人的运动范围.html">
+            
+                <a href="机器人的运动范围.html">
+            
+                    
+                    0x66 机器人的运动范围
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.67" data-path="剪绳子.html">
+            
+                <a href="剪绳子.html">
+            
+                    
+                    0x67 剪绳子
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">II LeetCode刷题</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >0x56 删除链表中重复的结点</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5220;&#x9664;&#x94FE;&#x8868;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x7ED3;&#x70B9;">&#x5220;&#x9664;&#x94FE;&#x8868;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x7ED3;&#x70B9;</h1>
+<h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;">&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h2>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x6392;&#x5E8F;&#x7684;&#x94FE;&#x8868;&#x4E2D;&#xFF0C;&#x5B58;&#x5728;&#x91CD;&#x590D;&#x7684;&#x7ED3;&#x70B9;&#xFF0C;&#x8BF7;&#x5220;&#x9664;&#x8BE5;&#x94FE;&#x8868;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x7ED3;&#x70B9;&#xFF0C;&#x91CD;&#x590D;&#x7684;&#x7ED3;&#x70B9;&#x4E0D;&#x4FDD;&#x7559;&#xFF0C;&#x8FD4;&#x56DE;&#x94FE;&#x8868;&#x5934;&#x6307;&#x9488;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x94FE;&#x8868;1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5 &#x5904;&#x7406;&#x540E;&#x4E3A; 1-&gt;2-&gt;5</p>
+<h3 id="&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;">&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</h3>
+<p>&#x8BBE;&#x7F6E;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#xFF0C;p1&#x8BB0;&#x5F55;&#x4E0A;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;p2&#x5BF9;&#x6BD4;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x548C;&#x540E;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x662F;&#x5426;&#x91CD;&#x590D;&#xFF0C;&#x91CD;&#x590D;&#x628A;p2&#x518D;&#x79FB;&#x52A8;&#x4E00;&#x4F4D;&#x5BF9;&#x6BD4;&#xFF0C;&#x76F4;&#x5230;&#x65E0;&#x91CD;&#x590D;&#x7ED3;&#x70B9;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x91CD;&#x590D;&#x7ED3;&#x70B9;&#x5219;&#x76F4;&#x63A5;&#x79FB;&#x52A8;p2&#xFF0C;p1&#x5219;&#x8BB0;&#x5F55;&#x4E0A;&#x4E00;&#x4E2A;p2&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x9047;&#x5230;&#x91CD;&#x590D;&#x7684;&#x7ED3;&#x70B9;&#xFF0C;&#x5C06;p1&#x7684;next&#x6307;&#x5411;&#x79FB;&#x52A8;&#x5B8C;&#x6210;&#x7684;p2&#x7684;next&#x4F4D;&#x7F6E;&#x5373;&#x53EF;&#x3002;p2&#x5219;&#x7EE7;&#x7EED;&#x79FB;&#x52A8;&#x5230;p1&#x4E0B;&#x4E00;&#x4F4D;&#x3002;</p>
+<h3 id="&#x4EE3;&#x7801;&#xFF1A;">&#x4EE3;&#x7801;&#xFF1A;</h3>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+ public class ListNode {
+    int val;
+    ListNode next = null;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+}
+*/</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">deleteDuplication</span><span class="hljs-params">(ListNode pHead)</span>
+    </span>{
+        <span class="hljs-keyword">if</span> (pHead==<span class="hljs-keyword">null</span> || pHead.next==<span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> pHead;
+        ListNode res = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>);
+        res.next = pHead;
+        ListNode p1 = res;
+        ListNode p2 = res.next;
+
+        <span class="hljs-keyword">while</span>(p2 != <span class="hljs-keyword">null</span>){
+            <span class="hljs-keyword">if</span>(p2.next!=<span class="hljs-keyword">null</span> &amp;&amp; p2.val == p2.next.val){
+                <span class="hljs-keyword">while</span>(p2.next!=<span class="hljs-keyword">null</span> &amp;&amp; p2.val == p2.next.val){
+                    p2 = p2.next;
+                }
+                p1.next = p2.next;
+                p2 = p1.next;
+            }<span class="hljs-keyword">else</span> {
+                p1 = p1.next;
+                p2 = p1.next;
+            }
+        }
+        <span class="hljs-keyword">return</span> res.next;
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="链表中环的入口结点.html" class="navigation navigation-prev " aria-label="Previous page: 0x55 链表中环的入口结点">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="二叉树的下一个结点.html" class="navigation navigation-next " aria-label="Next page: 0x57 二叉树的下一个结点">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"0x56 删除链表中重复的结点","level":"2.56","depth":1,"next":{"title":"0x57 二叉树的下一个结点","level":"2.57","depth":1,"path":"二叉树的下一个结点.md","ref":"二叉树的下一个结点.md","articles":[]},"previous":{"title":"0x55 链表中环的入口结点","level":"2.55","depth":1,"path":"链表中环的入口结点.md","ref":"链表中环的入口结点.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"删除链表中重复的结点.md","mtime":"2019-11-26T13:55:45.853Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-29T17:37:32.131Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
