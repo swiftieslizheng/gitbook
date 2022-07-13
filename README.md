@@ -9,4 +9,4 @@
 
 [http://www.lizheng0928.top/](http://www.lizheng0928.top/)
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=swiftieslizheng)](https://github.com/anuraghazra/github-readme-stats)
+
